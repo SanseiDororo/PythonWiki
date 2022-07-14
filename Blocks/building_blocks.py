@@ -136,7 +136,7 @@ def building_blocks():
            True, False, None, print etc. which are available on every level of Python code.
 
            Built-in scope encloses modules scopes which have their own namespaces. If Python interpreter
-           doesn't find reference to a give object on the level of given scope it searches in the enclosing scope
+           doesn't find reference to a given object on the level of the given scope it searches in the enclosing scope
            to find it there. If the object doesn't exist in any scope Python returns name error.
 
            For example: print is a built-in function which means it is stored on the highest 
@@ -162,6 +162,26 @@ def building_blocks():
 
             local_scope('ten') => tententen...
 
+        We can always modify objects on the global level by using the **global** keyword.
+
+            value = 10
+            def change_value_globally():
+                global value 
+                value = 1000
+
+        If we need to modify objects from the level of nested function, we can use **nonlocal** keyword.
+
+            def level_1():
+                value = "level1"
+                def level_2():
+                    nonlocal value
+                    value "override level1"
+                    print (value)
+                level_2()
+            
+            level_1() will return override level1 string.
+                    
+
         Main scopes in Python:
 
         * Global scope (built-in objects)
@@ -170,7 +190,7 @@ def building_blocks():
         
         ''')
 
-
+    
     with st.expander('Resources'):
         st.write('''
             * [Variable Referencing](https://colab.research.google.com/drive/1iVJ5R5jaI5zmyhofeadwhtvyfpWC6414?usp=sharing)

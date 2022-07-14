@@ -1,16 +1,16 @@
-### Set of projects based on the streamlit framework
+### This is Python Encyclopedia
 
 ##### Content
 
-- basic components
-- basic user authentification flow
-- simple NLP examples
-- stroski refactor
+- basic building blocks
+- numeric types
+- functions
+- standard libraries
 
 ##### To Do
 
-- encrypt database with sqlcipher
+- add most popular libraries
 
 ##### Issues
 
-- No module named 'pysqlcipher3' error while pip installin pysqlcipher
+- 

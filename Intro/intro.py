@@ -66,8 +66,8 @@ def intro():
     with st.expander('Make a donation'):
         st.write('''
 
-            If you like this project you can always support it by sending a donation to
-            one of the following addresses:
+            If you like this project and you would like support it's further development, you
+            can make a donation by sending supported tokens:
 
             ##### ERG
         
