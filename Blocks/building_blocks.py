@@ -67,12 +67,12 @@ def building_blocks():
 
             * They must star with a letter or the underscore.
             * Can not be reserved words.
-            * When identifier starts with single underscore, 
-              it means that it is considered as _private object.
-            * When identifier starts with double underscore,
-              it is used to "mangle" class attributes.
+            * When identifier starts with the single underscore, 
+              it means that it is considered as a _private object.
+            * When identifier starts with the double underscore,
+              it is used to "mangle" the class attributes.
             * When identifier is enclosed with double underscores,
-              it means that is reserved system-defined name.  
+              it means that is reserved, system-defined name.  
             *
 
             
@@ -179,7 +179,7 @@ def building_blocks():
                     print (value)
                 level_2()
             
-            level_1() will return override level1 string.
+            level_1() will return overrided level1 string.
                     
 
         Main scopes in Python:

@@ -85,7 +85,7 @@ def standard_library():
          st.write('''
 
             Inspect module in Python helps you gather additional information about the objects from the observed code.
-            There are several available methods which you can use. The list below is not extensive but
+            There are several available methods which you can use. The list below is not extensive, but
             gives a general perspective.
 
                 import inspect
@@ -132,8 +132,67 @@ def standard_library():
 
          ''')
     
-    with st.expander('Datetime'):
+    with st.expander('Logging'):
          st.write('''
+            Logging is one of the most crucial features of every program. Without
+            logs it is impossible to monitor, maintain and develop any application.
+            Python offers logging module to address this issue.
+
+            logging module provides log severity scale which range fro 10 to 50.
+
+            * 10 low risk (debbuging)
+            * 20 low risk (diagnostic)
+            * 30 moderate risk (events which require attention)
+            * 40 high risk (error, segment in application didn't work as expected)
+            * 50 critical (mission critical event occured)\
+
+            Logging messages can be divided into 3 main groups: WARNING, ERROR, CRITICAL.
+
+            Configuration for the logging is set in the:
+            
+                import logging
+                logging.basicConfig(level="INFO", filename="", filemode="", format="")
+
+
+            Since formatting can be very important, there are several available attributes.
+
+            * Level: defines at which level message is shown or stored
+            * Filename: defines file which is created to hold logs
+            * Filemode: defines mode of storing files (w: overwrite), (a:append)
+            * Format: defines log format parametres.
+
+            
+            [Formatting attributes](https://docs.python.org/3/library/logging.html#logrecord-attributes)
+
+            [PEP 282](https://peps.python.org/pep-0282/)
+
+            [Example](https://colab.research.google.com/drive/18p9h7z_E4Sm_3KGtcfK5LPDFPXd9OMKL#scrollTo=reNFE6WkEs9o)    
+
+
+         ''')
+
+    with st.expander('Collections'):
+        st.write('''
+            
+            Collections module provide various types of containers and corresponding methods to store
+            and retreive items. It is sort of an extension to the build in data types.
+
+            * Named Tuples
+
+            Named tuple is a class factory function from the collections module. It allows as to create 
+            light-weight object types which can store items accesible by their names. 
+            
+
+                from collections import namedtuple
+
+                Philosopher = namedtuple('Philosopher', ['name', 'surname', 'nationality'])
+
+                baruch_spinoza = Philosopher('Baruch', 'Spinoza', 'Dutch')
+
+            [Code](https://colab.research.google.com/drive/13uT8EWYlVaMdzyxyUy7pEg--JhVGyKQA#scrollTo=rSHG3gU0-Lf5)
+
+            * Counters
+
 
 
          ''')

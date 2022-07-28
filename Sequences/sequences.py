@@ -38,9 +38,23 @@ def sequences():
         st.write('''
             Tuples are immutable containers of elements with non-arbitrary positional relevance.
             They can be homogeneous (storing elements of the same type) or heterogeneous
-            (storing elements of different types). Content of a tuple is iterable. 
-            
+            (storing elements of a different types). Content of a tuple is iterable. 
 
+            According to the non-arbitrary relevance of the elements in the tuple, they are very
+            useful for storing various types of data.
+
+            For example:
+
+            * 2D coordinates (x: x axis, y: y axis, z: z axis)
+            * Entities (person: name, surname, age | city: name, country, population)
+
+                    #Packing variables into tuple:
+                    philosopher = 'Jeremy', 'Bentham', 'Utilitarist'
+
+                    #Unpacking tuple values:
+                    name, age, occupation = philosopher
+
+            [Example](https://colab.research.google.com/drive/17nVp9YrOiehbJY64r5G4x5n-E-uK8cYX?usp=sharing)
             ''')
         
 

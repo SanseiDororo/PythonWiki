@@ -10,10 +10,11 @@ def intro():
     st.write("")
     st.write('''
             This encyclopedia contains valuable information about the Python language
-            and it's usable modules. Each module is covered under the separate sub page.
+            basic data types and it's usable modules. Each data type or module is 
+            covered under the separate sub page.
 
             The aim of this page is to help you find most common information, answers and 
-            recipes in the quick and easy manner. Besides it wants to highlight why Python
+            recipes in the quick and easy manner. Besides, it wants to highlight why Python
             is far beyond an ordinary programming language. It is on-to-logical habitat for
             all the curious and open minds.
     

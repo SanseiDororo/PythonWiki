@@ -10,11 +10,13 @@ from Sequences.sequences import sequences
 from Zen.zen import zen
 from Standard.standard import standard_library
 
+
 the_truth = zen()
 
 def main():
     
-    menu = ['Intro', 'Building Blocks', 'Numeric Types', 'Functions','Sequences', 'Standard Library']
+    menu = ['Intro', 'Building Blocks', 'Numeric Types', 'Functions',
+            'Sequences', 'Standard Library', ]
     sub_page = st.sidebar.selectbox('Menu', menu)
 
     if sub_page == 'Intro':
