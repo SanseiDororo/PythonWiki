@@ -72,14 +72,14 @@ def intro():
 
             ##### ERG
         
-                9fkAUtZsEegVyKukFAzGN89zWsoHSK7JCBcNxwgiE7oHC95AFTY
+                9gzJYSDzkULXgCgAp6GGMeKtxo4ELGDi4TPauJfJLTUqJ2GWbBg
         ''')
         
         st.write('''
 
             ##### ADA
         
-                addr1q8ncfqc7xa9f7qmaskyrgfln059m7srcj36jttautsnkep9nqlhalm5s3n6wyt3yq60a3uyhuws34t39qakwl6gcvvzq8nvvpfpf
+                addr1qya93t4rcz70e5fh3pamcc33ge89yykjwsfl8arxmepx2ndnqlhalm5s3n6wyt3yq60a3uyhuws34t39qakwl6gcvvzqec2ske
         ''')
         
         st.write('''
