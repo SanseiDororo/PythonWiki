@@ -1,4 +1,6 @@
 import streamlit as st
+import random
+from collections import Counter
 
 
 def standard_library():
@@ -172,12 +174,12 @@ def standard_library():
          ''')
 
     with st.expander('Collections'):
-        st.write('''
+        st.write(f'''
             
             Collections module provide various types of containers and corresponding methods to store
             and retreive items. It is sort of an extension to the build in data types.
 
-            * Named Tuples
+            * NAMED TUPLES
 
             Named tuple is a class factory function from the collections module. It allows as to create 
             light-weight object types which can store items accesible by their names. 
@@ -189,10 +191,60 @@ def standard_library():
 
                 baruch_spinoza = Philosopher('Baruch', 'Spinoza', 'Dutch')
 
+            Namedtuples have default dunder_doc property. It is available for the properties as well.
+            It is possible to override the default docstring by assigning new value to the namedtuple dunder_doc.
+            Same is true for the attributes of the named tuple.
+
             [Code](https://colab.research.google.com/drive/13uT8EWYlVaMdzyxyUy7pEg--JhVGyKQA#scrollTo=rSHG3gU0-Lf5)
 
-            * Counters
+            * COUNTER
 
+            Counter is subclass of dictionary, which helps to count hashable objects;
+
+            Example: 
+
+                #Count number of items in list of random number. 
+                Counter(random.randint(1,10) for x in range(100)).
+                {Counter(random.randint(1,10) for x in range(100))}
 
 
          ''')
+
+    with st.expander('Random'):
+        st.write(f'''
+
+            Random module provides pseudo-random number generator and the related functions.
+            Values are produced by the given algorithm and they are based on the provided seed 
+            number. Seed number should be random as well, otherwise we can predict results.
+            All funtions from random module utilise same seed. Ussually seed is derived from the 
+            system clock since it changes constantly.
+
+            1. CHOSE RANDOM NUMBER:  
+
+                random.randint(1,10) = 
+                {random.randint(1,10)}
+
+            2. MAKE RANDOM CHOICE:
+
+                random.choice(sequence)=
+                {random.choice('sequence')}
+
+                Make 5 choices with choices
+                {random.choices('sequence', k=5)}
+
+
+           3. PICK SAMPLE FROM POPULATION WITHOUT REPETITION
+
+                
+                random.sample([1,2,3,4,5], k=3) = 
+                {random.sample([1,2,3,4,5], k =3 )}
+
+
+            
+
+            [Random Module Documentation](https://docs.python.org/3/library/random.html)
+
+
+        ''')
+    
+    

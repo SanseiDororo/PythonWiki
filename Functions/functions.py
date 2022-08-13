@@ -35,7 +35,8 @@ def functions():
             
 
             Functions can take positional arguments which may or may have not default value. For
-            example (def a_func(a,b=20)). We can pass a tuple of remaining positional arguments to 
+            example (def a_func(a,b=20)). Default values of the function can be retrieved with
+            the **defaults** dunder method method. We can pass a tuple of remaining positional arguments to 
             function with *args. 
 
             Functions can as-well take keyword arguments which are returned as a dictionary of key-value

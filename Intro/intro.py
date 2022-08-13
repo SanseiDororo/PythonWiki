@@ -64,11 +64,11 @@ def intro():
         
         ''')
 
-    with st.expander('Make a donation'):
+    with st.expander('Support'):
         st.write('''
 
-            If you like this project and you would like support it's further development, you
-            can make a donation by sending supported tokens:
+            If you like this project and you would like to support it's further development, you
+            can make a donation by sending ERG, ADA or BTC:
 
             ##### ERG
         
@@ -85,7 +85,7 @@ def intro():
         st.write('''
             ##### BTC
         
-                addr1q8ncfqc7xa9f7qmaskyrgfln059m7srcj36jttautsnkep9nqlhalm5s3n6wyt3yq60a3uyhuws34t39qakwl6gcvvzq8nvvpf
+                16T8KzvJ6LZVJSsDv6ntad3gXAESCKvb7t
         ''')
     
     st.write("")

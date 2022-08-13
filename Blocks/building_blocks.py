@@ -191,6 +191,79 @@ def building_blocks():
         ''')
 
     
+    with st.expander('Modules'):
+        st.write('''
+            Modules are instances of the data type Module. They have their own execution space
+            associated with the specific namespace. Namespace is defined by the globals() dictionary.
+            
+            Importmodule('module_name') function from the importlib package takes care for the importing proces.
+            When modules are imported they get stored in the sys.module cache. 
+            
+            Modules get loaded or imported from a file. In general modules represent containers
+            of a global variables, which can be checked with the:
+
+                globals()
+
+                a = 10
+                globals()['a'] => 10
+
+            Property, which defines which object from the module can be imported is:
+
+                __all__ = ['func1', 'func2'...] 
+
+            Dunder all is a list of strings, representing symbols which will be exported
+            when module gets imported.
+        
+            [Example](https://colab.research.google.com/drive/1WMyDksP-w-39vG6Gls62U8i3CrdHzu6G?usp=sharing)
+
+        ''')
+
+    with st.expander('Packages'):
+        st.write('''
+            Packages are folders which contain several python modules. If we want to change
+            a folder into a package, we need to add initialisation file in it:
+
+                __init__.py file
+
+            Init file stores imports of the modules which belong to a package. This way it is 
+            easier to import nested modules. Example of the __init__.py
+
+                from .modulename import object
+                from .modulename1 import *
+
+            Python supports implicit or **namespace** packages as well. In comparison to ordinary
+            packages, they don't contain an __init__.py and can be spreaded accross various folders.
+
+            Namespace packages are covered in:
+
+            [PEP 420](https://peps.python.org/pep-0420/)
+
+            IMPORTING ZIPPED MODULES
+
+            Python supports importing zipped modules. 
+
+                import sys
+                sys.path.append('./module_name.zip')
+                import module
+
+        ''')
+
+    with st.expander('Dunder methods and Attributes'):
+        st.write('''
+            Below is the non-extensive list of some useful dunder methods and their main usage:
+
+            | Method / Attribute   | Usage                                                 |
+            |----------------------|-------------------------------------------------------|
+            | __all__              | List of strings defining which symbols of the module gets exported at the import|
+            | Modules   | Lowercase, short, underscores allowed                 |
+            | Classes   | Upper CamelCase                                       |
+            | Functions | Lowercase, words separated with underscores           |
+            | Variables | Same as functions                                     |
+            | Constants | Uppercase, words separated with underscore            |
+
+        ''')
+
+
     with st.expander('Resources'):
         st.write('''
             * [Variable Referencing](https://colab.research.google.com/drive/1iVJ5R5jaI5zmyhofeadwhtvyfpWC6414?usp=sharing)

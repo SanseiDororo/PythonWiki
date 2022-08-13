@@ -38,6 +38,10 @@ def numeric_types():
 
             We can check the memory size of the integer with the getsizeof() function from the sys module.
 
+            Python 3.6 or above allows underscores between the sections of the
+            large integers in order to make it readable. We can write 10m as
+            10_000_000. 
+            
             Integers support all the standard arithmetic operations:
 
             | Operation              | Symbol                                       |
@@ -49,6 +53,8 @@ def numeric_types():
             | Multiplication         |   *                                          |
             | Exponents              |   **                                         |
 
+
+           
 
         ''')
 
