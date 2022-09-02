@@ -1,6 +1,11 @@
 import streamlit as st
 import random
 from collections import Counter
+from datetime import date, datetime
+from time import timezone
+
+today = date.today()
+now = datetime.now()
 
 
 def standard_library():
@@ -243,6 +248,82 @@ def standard_library():
             
 
             [Random Module Documentation](https://docs.python.org/3/library/random.html)
+
+
+        ''')
+
+    with st.expander('Datetime'):
+            st.write(f'''
+
+            Datetime module supplies various classes for dealing with the date and time.
+            Date-time operations are crucial for various types of tasks, for example:
+
+            * timestamping records
+            * defining expiration periods for the tokens
+            * calculating trends between specific periods
+            * analyse historical data and prediction of the future trends
+
+            Below are some common operations with the date-times.  
+
+            1. GET CURRENT DAY:  
+
+                date.today() = 
+                {date.today()}
+
+                Attributes belonging to the date.today class are day | month | year
+
+                today = date.today()
+
+                * today.day = {today.day}
+                * today.month = {today.month}
+                * today.year = {today.year}
+
+                datetime.now() = {datetime.now()}
+
+                Attributes belonging to the datetime.now class are hour | minute | second
+
+                now = datetime.now()
+
+                * now.hour = {now.hour}
+                * now.minute = {now.minute}
+                * now.second = {now.second}
+
+            2. STRING FORMATTING
+
+                We can format datetime outputs with the strftime method which provides several parametres.
+
+                today.strftime("%A %d %B %Y") = {today.strftime("%A %d %B %Y")}                
+                now.strftime ("%A %d %B %Y %H":%m:%d) = {now.strftime ("%A-%d-%B-%Y %H:%m:%d")}
+
+            3. CALCULATING DELTAS
+
+                    Adding and subtracting days from given date
+                
+                    init_date = datetime.date(2000,1,1)
+                    plus_100 = datetime.timedelta(100)
+                    sum_date = (init_date+plus_100)
+
+                    Timedeltas
+                
+                    date_1 = datetime.date(2022, 1, 30)
+                    date_delta = datetime.timedelta(days = 29)
+                    date_delta_year = datetime.timedelta(days = 360)
+                    print(date_1 - date_delta)
+                    print(date_1 + date_delta)
+                    print(date_1+date_delta_year)
+
+                    Arithmetic operations
+                
+                    bd_date = datetime.date(1978, 1, 27)
+                    days_lived_so_far = (datetime.date.today() - bd_date)
+                    print(days_lived_so_far) 
+
+
+
+
+            
+
+            [Datetime Module Documentation](https://docs.python.org/3/library/datetime.html)
 
 
         ''')
