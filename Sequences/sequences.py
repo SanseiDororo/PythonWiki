@@ -1,5 +1,8 @@
 import streamlit as st
 
+s = "This is a string"
+series = "Monthy Python"
+langauage = "Python"
 
 def sequences():
     st.header('Sequences')
@@ -26,11 +29,71 @@ def sequences():
             | indexable     | indexable              | indexable                 |       
             | homo / hetero | homo / hetero          | homogeneous               |    
             | iterable      | iterable               | iterable                  |    
-            | indexable     | indexable              | idnexable                 | 
+            | indexable     | indexable              | indexable                 | 
             | immutable     | mutable                | mutable                   |                      
             | fixed length  | arbitrary length       | fixed length              |                      
             | fixed order   | arbitrary order        | fixed order               |
             
+
+            ''')
+
+    with st.expander('Strings'):
+        st.write(f'''
+            
+            Strings are mutable indexable and iterable sequences. They maintain left to right order.
+            Strings can represent various types of data from characters to byte arrays and similar.
+            There are several built in methods for dealing with strings.
+
+            1. SEQUENCE OPERATIONS
+
+                s = "This is a string"                
+                
+                * Check the length of the string
+                   
+                    len(s) = {len(s)}
+
+                * Retrieve the first and the last item
+                
+                    s[0] = {s[0]}
+
+                    s[-1] = {s[-1]}
+
+                * Retrieve all characters past third
+                
+                    s[2:] = {s[2:]}
+
+                * Replace specific part
+
+                    s.replace('This', 'That') = {s.replace('This', 'That')}
+
+                * Make characters upper
+
+                    s.upper = {s.upper()}
+
+                * Split on delimeter into a list of substrings
+
+                    s.split(' ') = {s.split(' ')}
+
+            2. STRING FORMATTING
+
+                Python offers various ways for formatting strings. 
+                
+                * C like
+
+                '%s was named after %s' % ('Python', 'Monthy Python') = {'%s was named after %s' % ('Python', 'Monthy Python')}
+
+                * .format
+
+                {r'{} was named after {}'}.format('Monthy', 'Monthy Python') = {'{} was named after {})'.format('Monthy', 'Monthy Python')}) 
+
+                * F string
+
+                By putting f before a string we can inject python variables, operations etc into strings, separating the items with the curly
+                brackets.
+                
+                More practical examples can be found here:
+
+                [Python String formatting](https://pyformat.info/)
 
             ''')
 
