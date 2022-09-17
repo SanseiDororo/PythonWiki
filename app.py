@@ -9,6 +9,8 @@ from Functions.functions import functions
 from Sequences.sequences import sequences
 from Zen.zen import zen
 from Standard.standard import standard_library
+from External.external import external_libraries
+from Distributing.distributing import distributing
 
 
 the_truth = zen()
@@ -16,7 +18,9 @@ the_truth = zen()
 def main():
     
     menu = ['Intro', 'Building Blocks', 'Numeric Types', 'Functions',
-            'Sequences', 'Standard Library', ]
+            'Sequences', 'Standard Library', 'External Libraries',
+            'Distributing',
+            ]
     sub_page = st.sidebar.selectbox('Menu', menu)
 
     if sub_page == 'Intro':
@@ -31,6 +35,10 @@ def main():
         sequences()
     elif sub_page == 'Standard Library':
         standard_library()
+    elif sub_page == 'External Libraries':
+        external_libraries()
+    elif sub_page == 'Distributing':
+        distributing()
     else:
         pass
     

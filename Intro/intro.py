@@ -27,7 +27,7 @@ def intro():
     with st.expander('Python Survival Kit'):
         st.write(f'{the_truth}')
 
-    with st.expander('Philosophic Aspects'):
+    with st.expander('Philosophical Aspects'):
         st.write(f'''
             Some aspects of Python are deeply meaningful from the philosophical perspective.
             This is a side effect of it's integrated polymorphism. One can always benefit from

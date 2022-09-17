@@ -90,6 +90,13 @@ def sequences():
 
                 By putting f before a string we can inject python variables, operations etc into strings, separating the items with the curly
                 brackets.
+
+                * Number formating
+
+                2.946263:.2f = {2.946263:.2f}
+                
+
+                
                 
                 More practical examples can be found here:
 
