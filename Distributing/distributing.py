@@ -101,6 +101,12 @@ def distributing():
 
     with st.expander('Pyproject.toml'):
         st.write('''
+            Pyproject.toml is the succesor of the setup.py file. The main reasons
+            for updating the main approach of building python projects with the setuptools
+            and corresponding setup.py file are covered in the (PEP 517)[https://peps.python.org/pep-0517/]
+            and (PEP 517)[https://peps.python.org/pep-0518/].
+
+            Pyproject.toml creates ad-hoc virtual environment in order to execute the build.
 
         ''')
 
