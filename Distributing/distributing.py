@@ -10,6 +10,9 @@ def distributing():
             __init__.py file are considered as packages. There are several ways to organise
             and automatically package your code and add additional metadata information.
 
+            Setuptools library provides toolset to build, package and distribute python code.
+            It is a thin wraper build around distutils. 
+
     
     ''')
     st.write("")
@@ -17,12 +20,13 @@ def distributing():
     st.write("")
     st.write("")
     
-    with st.expander('Setuptools'):
+    with st.expander('Setup.py'):
         st.write('''
-            Setuptools library provides toolset to build, package and distribute python code.
-            It is a thin wraper build around distutils. In order to build a python code as a 
-            consistent package setup.py (now being discouredged in favour of pyproject.toml)
-            needs to be provided. 
+
+            In order to build a python code as a consistent package we can use setup.py file. 
+            Setup.py file should contain all the neccessary data associated with the build process
+            of the package. Most important segments of the setup file are (requirements, python version,
+            license, author etc.) 
             
                 Non extensive example of the setup.py file
 
@@ -93,6 +97,11 @@ def distributing():
 
             [Extensive template](https://github.com/pypa/sampleproject) 
         
+        ''')
+
+        with st.expander('Pyproject.toml'):
+            st.write('''
+
         ''')
 
     
