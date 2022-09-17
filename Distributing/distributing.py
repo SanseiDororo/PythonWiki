@@ -99,8 +99,8 @@ def distributing():
         
         ''')
 
-        with st.expander('Pyproject.toml'):
-            st.write('''
+    with st.expander('Pyproject.toml'):
+        st.write('''
 
         ''')
 
