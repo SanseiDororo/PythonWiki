@@ -2,9 +2,10 @@ import streamlit as st
 
 
 def distributing():
-    st.header('Distributing')
+    st.header("Distributing")
     st.write("")
-    st.write('''
+    st.write(
+        """
             This section covers different ways to package and distribute python code.
             By convenction python files are considered as modules, while folders containing
             __init__.py file are considered as packages. There are several ways to organise
@@ -14,14 +15,16 @@ def distributing():
             It is a thin wraper build around distutils. 
 
     
-    ''')
+    """
+    )
     st.write("")
-    
+
     st.write("")
     st.write("")
-    
-    with st.expander('Setup.py'):
-        st.write('''
+
+    with st.expander("Setup.py"):
+        st.write(
+            """
 
             In order to build a python code as a consistent package we can use setup.py file. 
             Setup.py file should contain all the neccessary data associated with the build process
@@ -97,10 +100,12 @@ def distributing():
 
             [Extensive template](https://github.com/pypa/sampleproject) 
         
-        ''')
+        """
+        )
 
-    with st.expander('Pyproject.toml'):
-        st.write('''
+    with st.expander("Pyproject.toml"):
+        st.write(
+            """
             Pyproject.toml is the succesor of the setup.py file. The main reasons
             for updating the main approach of building python projects with the setuptools
             and corresponding setup.py file are covered in the (PEP 517)[https://peps.python.org/pep-0517/]
@@ -108,6 +113,12 @@ def distributing():
 
             Pyproject.toml creates ad-hoc virtual environment in order to execute the build.
 
-        ''')
+        """
+        )
 
-    
+    with st.expander("Poetry"):
+        st.write(
+            """
+        
+        """
+        )

@@ -1,25 +1,26 @@
 import streamlit as st
 
 
-
-
 def external_libraries():
-    st.header('External Libraries')
+    st.header("External Libraries")
     st.write("")
-    st.write('''
+    st.write(
+        """
             This section covers external Python Libraries. External libraries extends
             the toolset of the standard library and can be used to solve specific
             challenges as for building command line interfaces, encryption, data wrangling
             database connections etc.
     
-    ''')
+    """
+    )
     st.write("")
-    
+
     st.write("")
     st.write("")
-    
-    with st.expander('Typer'):
-        st.write('''
+
+    with st.expander("Typer"):
+        st.write(
+            """
         
             Typer is external library for building command line interfaces. It can 
             be used as an out-of-the-box alternative to the Argparse module.
@@ -54,6 +55,5 @@ def external_libraries():
 
             [Hompage](https://typer.tiangolo.com/)
         
-        ''')
-    
-    
+        """
+        )

@@ -2,19 +2,22 @@ import streamlit as st
 
 
 def functions():
-    st.header('Functions in Python')
+    st.header("Functions in Python")
     st.write("")
-    st.write('''
+    st.write(
+        """
             This section covers most important segments of functions in Python. 
     
-    ''')
+    """
+    )
     st.write("")
-    
+
     st.write("")
     st.write("")
-    
-    with st.expander('Basics'):
-        st.write('''
+
+    with st.expander("Basics"):
+        st.write(
+            """
             Functions are callables which execute predefined set of code under it's own scope. 
             They can be parameterized. When we call a function with certain parametres, these parametres become arguments 
             of the given function. 
@@ -42,9 +45,11 @@ def functions():
             Functions can as-well take keyword arguments which are returned as a dictionary of key-value
             pairs. Keyword parametres are defined by **kwargs. You can call *args and **kwargs as you like.
 
-            ''')
-        st.write('')    
-        st.write('''
+            """
+        )
+        st.write("")
+        st.write(
+            """
 
             | Positional Arguments                  | Keyword Arguments                            |
             |---------------------------------------|----------------------------------------------|
@@ -53,15 +58,19 @@ def functions():
             | * end of positional arguments         |                                              |
             
 
-            ''')
-        st.write('') 
-        st.write('''
+            """
+        )
+        st.write("")
+        st.write(
+            """
             [Code Sample:](https://colab.research.google.com/drive/1HrwIlNfjwxE5XohQcK49pB3dvIR6MrAJ?usp=sharing)
         
-        ''')
+        """
+        )
 
-    with st.expander('Documentation And Annotation'):
-        st.write('''
+    with st.expander("Documentation And Annotation"):
+        st.write(
+            """
             First line of every function, if it is a string, serves for the documentation purposes.
             One or multiline string gets stored into .__doc__ property of the function objects. 
             This helps anybody using function to know it's puprose and the mechanism. Docstring can be
@@ -82,10 +91,12 @@ def functions():
 
             [PEP 3107 - Function Annotations](https://peps.python.org/pep-3107/)    
         
-        ''')
+        """
+        )
 
-    with st.expander('Anonymous Functions'):
-        st.write('''
+    with st.expander("Anonymous Functions"):
+        st.write(
+            """
             Anonymous functions in Python are single line expressions initialised with
             the keyword lambda. They can be stored in a variable or used as a parameter
             of another function. They can use only single expresseion and cannot be annotaded.
@@ -96,10 +107,12 @@ def functions():
 
                 
         
-        ''')
+        """
+        )
 
-    with st.expander('Closures'):
-        st.write('''
+    with st.expander("Closures"):
+        st.write(
+            """
 
             Since functions are first-class objects in Python it is posible to nest functions. We could
             define closure as inner function which shares variables with the outer function. Function
@@ -121,13 +134,12 @@ def functions():
 
             
             
-        ''')
+        """
+        )
 
-
-
-
-    with st.expander('Decorators'):
-        st.write('''
+    with st.expander("Decorators"):
+        st.write(
+            """
             
             Decorator function is a function which takes another function as an argument. Decorators
             can be stacked and parameterized. 
@@ -148,10 +160,12 @@ def functions():
 
             [Resource](https://colab.research.google.com/drive/1r7a-eL2FSK1m_dxjvWiXQMTqNIG-D_--#scrollTo=dXYmO4XeIItu)
 
-        ''')
+        """
+        )
 
-    with st.expander('Functools'):
-        st.write('''
+    with st.expander("Functools"):
+        st.write(
+            """
             
             Functools module contains set of higher-order functions to perform specific 
             operations on callable objects. It was introduced in Python 2.5 in 2006. Below is the
@@ -179,6 +193,5 @@ def functions():
 
             [Examples](https://colab.research.google.com/drive/1O5OZevVVON68o2PCVtoXbjp2k8V1NBmP#scrollTo=bdouNM_WsPs9)
 
-        ''')
-
-    
+        """
+        )

@@ -9,19 +9,22 @@ now = datetime.now()
 
 
 def standard_library():
-    st.header('Standard Library')
+    st.header("Standard Library")
     st.write("")
-    st.write('''
+    st.write(
+        """
             This section covers modules from the Python Standard Library. 
     
-    ''')
+    """
+    )
     st.write("")
-    
+
     st.write("")
     st.write("")
-    
-    with st.expander('Argparse'):
-        st.write('''
+
+    with st.expander("Argparse"):
+        st.write(
+            """
         
         Argparse module is parser for CLI arguments, subcommands and options.
 
@@ -86,10 +89,12 @@ def standard_library():
             
         [You Tube](https://www.youtube.com/watch?v=q94B9n_2nf0)
         
-        ''')
+        """
+        )
 
-    with st.expander('Inspect'):
-         st.write('''
+    with st.expander("Inspect"):
+        st.write(
+            """
 
             Inspect module in Python helps you gather additional information about the objects from the observed code.
             There are several available methods which you can use. The list below is not extensive, but
@@ -122,10 +127,12 @@ def standard_library():
             
             [Official Documentation](https://docs.python.org/3/library/inspect.html)    
 
-            ''')
-    
-    with st.expander('Operator'):
-         st.write('''
+            """
+        )
+
+    with st.expander("Operator"):
+        st.write(
+            """
             Operation module offers functions which corresponds to the intrinsic operators in Python.
 
             For example:
@@ -137,10 +144,12 @@ def standard_library():
 
             [Official Documentation](https://docs.python.org/3/library/operator.html)
 
-         ''')
-    
-    with st.expander('Logging'):
-         st.write('''
+         """
+        )
+
+    with st.expander("Logging"):
+        st.write(
+            """
             Logging is one of the most crucial features of every program. Without
             logs it is impossible to monitor, maintain and develop any application.
             Python offers logging module to address this issue.
@@ -176,10 +185,12 @@ def standard_library():
             [Example](https://colab.research.google.com/drive/18p9h7z_E4Sm_3KGtcfK5LPDFPXd9OMKL#scrollTo=reNFE6WkEs9o)    
 
 
-         ''')
+         """
+        )
 
-    with st.expander('Collections'):
-        st.write(f'''
+    with st.expander("Collections"):
+        st.write(
+            f"""
             
             Collections module provide various types of containers and corresponding methods to store
             and retreive items. It is sort of an extension to the build in data types.
@@ -213,10 +224,12 @@ def standard_library():
                 {Counter(random.randint(1,10) for x in range(100))}
 
 
-         ''')
+         """
+        )
 
-    with st.expander('Random'):
-        st.write(f'''
+    with st.expander("Random"):
+        st.write(
+            f"""
 
             Random module provides pseudo-random number generator and the related functions.
             Values are produced by the given algorithm and they are based on the provided seed 
@@ -250,10 +263,12 @@ def standard_library():
             [Random Module Documentation](https://docs.python.org/3/library/random.html)
 
 
-        ''')
+        """
+        )
 
-    with st.expander('Datetime'):
-            st.write(f'''
+    with st.expander("Datetime"):
+        st.write(
+            f"""
 
             Datetime module supplies various classes for dealing with the date and time.
             Date-time operations are crucial for various types of tasks, for example:
@@ -326,6 +341,5 @@ def standard_library():
             [Datetime Module Documentation](https://docs.python.org/3/library/datetime.html)
 
 
-        ''')
-    
-    
+        """
+        )

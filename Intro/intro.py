@@ -1,14 +1,16 @@
 import streamlit as st
 
-#Modules
+# Modules
 from Zen.zen import zen
 
 the_truth = zen()
 
+
 def intro():
-    st.header('Python Encyclopedia')
+    st.header("Python Encyclopedia")
     st.write("")
-    st.write('''
+    st.write(
+        """
             This encyclopedia contains valuable information about the Python language
             basic data types and it's usable modules. Each data type or module is 
             covered under the separate sub page.
@@ -18,17 +20,19 @@ def intro():
             is far beyond an ordinary programming language. It is on-to-logical habitat for
             all the curious and open minds.
     
-    ''')
+    """
+    )
     st.write("")
-    
-    st.write("")
-    st.write("")
-    
-    with st.expander('Python Survival Kit'):
-        st.write(f'{the_truth}')
 
-    with st.expander('Philosophical Aspects'):
-        st.write(f'''
+    st.write("")
+    st.write("")
+
+    with st.expander("Python Survival Kit"):
+        st.write(f"{the_truth}")
+
+    with st.expander("Philosophical Aspects"):
+        st.write(
+            f"""
             Some aspects of Python are deeply meaningful from the philosophical perspective.
             This is a side effect of it's integrated polymorphism. One can always benefit from
             the meditating on this subjects repeatedly.
@@ -62,10 +66,12 @@ def intro():
 
             Science doesn't care what you believe.
         
-        ''')
+        """
+        )
 
-    with st.expander('Support'):
-        st.write('''
+    with st.expander("Support"):
+        st.write(
+            """
 
             If you like this project and you would like to support it's further development, you
             can make a donation by sending ERG, ADA or BTC:
@@ -73,21 +79,24 @@ def intro():
             ##### ERG
         
                 9gzJYSDzkULXgCgAp6GGMeKtxo4ELGDi4TPauJfJLTUqJ2GWbBg
-        ''')
-        
-        st.write('''
+        """
+        )
+
+        st.write(
+            """
 
             ##### ADA
         
                 addr1qya93t4rcz70e5fh3pamcc33ge89yykjwsfl8arxmepx2ndnqlhalm5s3n6wyt3yq60a3uyhuws34t39qakwl6gcvvzqec2ske
-        ''')
-        
-        st.write('''
+        """
+        )
+
+        st.write(
+            """
             ##### BTC
         
                 16T8KzvJ6LZVJSsDv6ntad3gXAESCKvb7t
-        ''')
-    
+        """
+        )
+
     st.write("")
-    
-    

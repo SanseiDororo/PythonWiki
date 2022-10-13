@@ -1,7 +1,8 @@
 import streamlit as st
 
+
 def zen():
-    return('''
+    return """
     
         The Zen of Python, by Tim Peters
 
@@ -43,4 +44,4 @@ def zen():
         
         Namespaces are one honking great idea -- let's do more of those!
     
-    ''')
+    """

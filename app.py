@@ -1,4 +1,4 @@
-#Dependencies
+# Dependencies
 import streamlit as st
 
 
@@ -11,38 +11,48 @@ from Zen.zen import zen
 from Standard.standard import standard_library
 from External.external import external_libraries
 from Distributing.distributing import distributing
+from Isolation.isolation import isolation
 
 
 the_truth = zen()
 
-def main():
-    
-    menu = ['Intro', 'Building Blocks', 'Numeric Types', 'Functions',
-            'Sequences', 'Standard Library', 'External Libraries',
-            'Distributing',
-            ]
-    sub_page = st.sidebar.selectbox('Menu', menu)
 
-    if sub_page == 'Intro':
+def main():
+
+    menu = [
+        "Intro",
+        "Building Blocks",
+        "Numeric Types",
+        "Functions",
+        "Sequences",
+        "Standard Library",
+        "External Libraries",
+        "Distributing",
+        "Isolation",
+    ]
+    sub_page = st.sidebar.selectbox("Menu", menu)
+
+    if sub_page == "Intro":
         intro()
-    elif sub_page == 'Building Blocks':
+    elif sub_page == "Building Blocks":
         building_blocks()
-    elif sub_page == 'Numeric Types':
+    elif sub_page == "Numeric Types":
         numeric_types()
-    elif sub_page == 'Functions':
+    elif sub_page == "Functions":
         functions()
-    elif sub_page == 'Sequences':
+    elif sub_page == "Sequences":
         sequences()
-    elif sub_page == 'Standard Library':
+    elif sub_page == "Standard Library":
         standard_library()
-    elif sub_page == 'External Libraries':
+    elif sub_page == "External Libraries":
         external_libraries()
-    elif sub_page == 'Distributing':
+    elif sub_page == "Distributing":
         distributing()
+    elif sub_page == "Isolation":
+        isolation()
     else:
         pass
-    
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

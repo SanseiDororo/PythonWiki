@@ -1,20 +1,23 @@
 import streamlit as st
 
+
 def building_blocks():
-    st.header('Python Building Blocks')
-    st.write('''
+    st.header("Python Building Blocks")
+    st.write(
+        """
     
         This section covers basic Python building blocks. It
         can serve as a quick Python refresher. Knowing fundamentals is
         always best approach to building complex ontologies.  
     
-    ''')
+    """
+    )
     st.write("")
     st.write("")
 
-    
     with st.expander("Data Typese"):
-        st.write('''
+        st.write(
+            """
             Python has the following built-in data types:
 
             | Numbers  | Collections            | Callables                 | Singletons        |
@@ -27,10 +30,12 @@ def building_blocks():
             |          | Dictionaries (Mappings)| Built-in-Methods          |                   |   
             
 
-        ''')
+        """
+        )
         st.write("")
         st.write("")
-        st.write('''
+        st.write(
+            """
             Everything in Python is an object. Each object type is documented.
             Built-in documentation can be accesed by the help function. 
 
@@ -38,11 +43,12 @@ def building_blocks():
 
                 help(int)
         
-        ''')
-        
-        
+        """
+        )
+
     with st.expander("Data mutability"):
-        st.write('''    
+        st.write(
+            """    
 
             Objects in Python fall into the two groups:
 
@@ -55,10 +61,12 @@ def building_blocks():
             | U-D Classes | Same as functions                                      |
             
 
-        ''')
-    
-    with st.expander('Naming Convections'):
-        st.write('''
+        """
+        )
+
+    with st.expander("Naming Convections"):
+        st.write(
+            """
         
             Identifying names in Python are **case-sensitive**. Rules how to use it are precisely
             defined in the [PEP 8](https://peps.python.org/pep-0008/) Style Guide. 
@@ -91,10 +99,12 @@ def building_blocks():
 
             
 
-        ''')
+        """
+        )
 
     with st.expander("Variables"):
-        st.write('''
+        st.write(
+            """
         
          Python is dynamically typed langugae meaning that variables are memory references. 
          They point to the certain addresses in the memory.
@@ -104,20 +114,28 @@ def building_blocks():
          which holds the object 19. With provided libraries we can count references pointing 
          to the certain memory address.
         
-        ''')
+        """
+        )
         st.write("")
-        st.write('''
+        st.write(
+            """
             In Python we can check the memory address for the specific object with
             the id() function.
-        ''')
-        memory_input = st.number_input('Please chose the random number', step=1, max_value=100)
-        st.write(f'''
+        """
+        )
+        memory_input = st.number_input(
+            "Please chose the random number", step=1, max_value=100
+        )
+        st.write(
+            f"""
             The memory address for your number is:
             {hex(id(memory_input))}
         
-        ''')
+        """
+        )
         st.write("")
-        st.write('''
+        st.write(
+            """
             **VARIABLE EQUALITY**:
 
             We can check if two variables are referencing the same memory address
@@ -126,10 +144,12 @@ def building_blocks():
             To check equality of the internal object state we use **==** operator.
             It is important to know that this are two very different things.
         
-        ''')
+        """
+        )
 
-    with st.expander('Scopes'):
-        st.write('''
+    with st.expander("Scopes"):
+        st.write(
+            """
            We could define scope as the level of object availability. Every scope level has it's own
            namespace. In Python there is no true cross module or app global scope. 
            The highest scope level is built-in scope which defines objects such as
@@ -188,11 +208,12 @@ def building_blocks():
         * Module scope (objects inside the module)
         * Local scope (objects inside the functions)
         
-        ''')
+        """
+        )
 
-    
-    with st.expander('Modules'):
-        st.write('''
+    with st.expander("Modules"):
+        st.write(
+            """
             Modules are instances of the data type Module. They have their own execution space
             associated with the specific namespace. Namespace is defined by the globals() dictionary.
             
@@ -216,10 +237,12 @@ def building_blocks():
         
             [Example](https://colab.research.google.com/drive/1WMyDksP-w-39vG6Gls62U8i3CrdHzu6G?usp=sharing)
 
-        ''')
+        """
+        )
 
-    with st.expander('Packages'):
-        st.write('''
+    with st.expander("Packages"):
+        st.write(
+            """
             Packages are folders which contain several python modules. If we want to change
             a folder into a package, we need to add initialisation file in it:
 
@@ -246,10 +269,12 @@ def building_blocks():
                 sys.path.append('./module_name.zip')
                 import module
 
-        ''')
+        """
+        )
 
-    with st.expander('Dunder methods and Attributes'):
-        st.write('''
+    with st.expander("Dunder methods and Attributes"):
+        st.write(
+            """
             Below is the non-extensive list of some useful dunder methods and their main usage:
 
             | Method / Attribute   | Usage                                                 |
@@ -261,13 +286,14 @@ def building_blocks():
             | Variables | Same as functions                                     |
             | Constants | Uppercase, words separated with underscore            |
 
-        ''')
+        """
+        )
 
-
-    with st.expander('Resources'):
-        st.write('''
+    with st.expander("Resources"):
+        st.write(
+            """
             * [Variable Referencing](https://colab.research.google.com/drive/1iVJ5R5jaI5zmyhofeadwhtvyfpWC6414?usp=sharing)
             * [PEP 8](https://peps.python.org/pep-0008/)
         
-        ''')
-
+        """
+        )

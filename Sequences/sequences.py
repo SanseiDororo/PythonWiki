@@ -4,21 +4,25 @@ s = "This is a string"
 series = "Monthy Python"
 langauage = "Python"
 
+
 def sequences():
-    st.header('Sequences')
+    st.header("Sequences")
     st.write("")
-    st.write('''
+    st.write(
+        """
             This section covers most important aspects of specific type of containers
             called sequences.  
     
-    ''')
+    """
+    )
     st.write("")
-    
+
     st.write("")
     st.write("")
-    
-    with st.expander('Types'):
-        st.write('''
+
+    with st.expander("Types"):
+        st.write(
+            """
 
             We have three types of sequences in Python: tuples, lists and strings.
             They share most of the attributes, but they have idiosycratic purpose
@@ -35,10 +39,12 @@ def sequences():
             | fixed order   | arbitrary order        | fixed order               |
             
 
-            ''')
+            """
+        )
 
-    with st.expander('Strings'):
-        st.write(f'''
+    with st.expander("Strings"):
+        st.write(
+            f"""
             
             Strings are mutable indexable and iterable sequences. They maintain left to right order.
             Strings can represent various types of data from characters to byte arrays and similar.
@@ -102,10 +108,12 @@ def sequences():
 
                 [Python String formatting](https://pyformat.info/)
 
-            ''')
+            """
+        )
 
-    with st.expander('Tuples'):
-        st.write('''
+    with st.expander("Tuples"):
+        st.write(
+            """
             Tuples are immutable containers of elements with non-arbitrary positional relevance.
             They can be homogeneous (storing elements of the same type) or heterogeneous
             (storing elements of a different types). Content of a tuple is iterable. 
@@ -125,7 +133,5 @@ def sequences():
                     name, age, occupation = philosopher
 
             [Example](https://colab.research.google.com/drive/17nVp9YrOiehbJY64r5G4x5n-E-uK8cYX?usp=sharing)
-            ''')
-        
-
-    
+            """
+        )
