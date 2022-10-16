@@ -22,10 +22,17 @@ def isolation():
     with st.expander("Pyenv"):
         st.write(
             """
+
+             ### Description
+
              Pyenv is a simple python version management tool which allows you to install and execute various types of python versions
              without taking the risk to lose overview of the state of each version. 
 
+             #### Installation
+
              [Installation guide for various OS types](https://github.com/pyenv/pyenv#installation) 
+
+             #### Usage
 
              Commands:
 
@@ -42,7 +49,7 @@ def isolation():
             | pyenv activate                        | Activates python virtual environment               |
             | pyenv deactivate                      | Deactivates virtual environment        |
             | pyenv virtualenvs                     | Shows created virtualenvs                      |
-            |                                       
+            |                                       |                                              |
 
             
             If we set available virtual environment as the local python version project it gets activate when we open the folder.
@@ -52,12 +59,66 @@ def isolation():
 
         """
         )
+
+    with st.expander("Pipenv"):
+        st.write(
+            """
+                ##### Description
+                
+                Pipenv is officialy recommended package for managing project dependecies. It is replacement for the virtualenv. Pipenv
+                makes it easy to initialise python project from the provided Pipenv file. It also allows to freeze specific
+                dependecy versions with Pipenv.lock file. Pyenv package for managing python versions makes pipenv even more powerful
+                since it allows you total control over your development and production environments.
+
+                [Official documentation](https://pipenv.pypa.io/en/latest/) 
+
+                
+                ##### Installation
+
+                Pipenv can be installed with the specific active version of python.
+
+                python -m pip install pipenv:
+
+                ##### Basic commands
+
+                In case of using **pyenv** it is extremely important to define which python interpreter pipenv should use. 
+                This is achieved with the pipenv --python[version string] command
+
+                |COMMAND                | COMMAND            |
+                |-----------------------|--------------------|
+                | Create virtual environment environment    | pipenv shell|
+                | Delete pipenv virtual environment | pipenv --rm|
+                | Deactivate virtualenvironment | exit |
+                | Install project dependencies | pipenv install [package name] |
+                | Install development project dependecies | pipenv install --dev [package name] |
+                | Installing from Pipfile | pipenv install|
+                | Installing development dependecies in editable mode | pipenv install --dev -e .|
+                | Uninstalling files| pipenv uninstall (--all-dev)|
+                | Creating lock file to freeze used dependecies | pipenv lock |
+                |                                       |                                              |
+                
+
+
+                ##### Basic Workflows
+
+                [Official Documentation](https://pipenv-fork.readthedocs.io/en/latest/basics.html)
+
+            """
+        )
+    
     with st.expander("Virtualenv"):
         st.write(
             """
+             ##### Description
+             
              Virtualenv module is part of the standard library and allows you to create virtual python environments
 
+             ##### Installation
 
+             python3 -m venv /path/to/new/virtual/environment
+
+             ##### Usage
+             
              Commands:
 
             | Command                               | Description                                  |
