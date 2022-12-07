@@ -12,6 +12,7 @@ from Standard.standard import standard_library
 from External.external import external_libraries
 from Distributing.distributing import distributing
 from Isolation.isolation import isolation
+from Tensor.tensor import tensor
 
 
 the_truth = zen()
@@ -29,6 +30,7 @@ def main():
         "External Libraries",
         "Distributing",
         "Isolation",
+        "TensorFlow"
     ]
     sub_page = st.sidebar.selectbox("Menu", menu)
 
@@ -50,6 +52,8 @@ def main():
         distributing()
     elif sub_page == "Isolation":
         isolation()
+    elif sub_page == "TensorFlow":
+        tensor()
     else:
         pass
 
