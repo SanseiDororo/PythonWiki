@@ -50,18 +50,22 @@ def pandas():
             """
             
                 1.Get first ten rows
+                
                 ```df.head(n=10)```
 
                 2.Get last 5 rows
+                
                 ```df.tail(n=5)```
 
                 3.Gather metadata about the df
+                
                 ```df.info()```
 
                 4.Gather aggregated data about the Dataframe
                 ```df.describe()```
 
                 5. Discover shape of the data DataFrame
+                
                 ```df.shape (returns number of rows and colums)```
 
 
@@ -74,100 +78,97 @@ def pandas():
             
                 #### DATAFRAME METHODS
 
-                returns basic statistics 
+                Returns basic statistics 
                 
                 ```df.describe()```         
                 
-                returns non missing values for each column or row
+                Returns non missing values for each column or row
                 
                 ```df.count()```
 
-                returns average value. Axis parameter selects row
+                Returns average value. Axis parameter selects row
                 
                 ```df.mean(axis = )```
 
-                returns the total of numerical values
+                Returns the total of numerical values
                 
                 ```df.sum()```
 
-                returns the median of values
+                Returns the median of values
                 
                 ```df.median()```
 
-                returns the minimum of values
+                Returns the minimum of values
                 
                 ```df.min()```             
                 
-                returns the maximum of values
+                Returns the maximum of values
                 
                 ```df.max()```
 
-                returns the index where the maximum value occurs
+                Returns the index where the maximum value occurs
                 
                 ```df.idxmax()```           
                 
-                returns the index where the minimum value occurs
+                Returns the index where the minimum value occurs
                 
                 ```df.idxmin()```
 
-                returns the absolute value of values
+                Returns the absolute value of values
                 
                 ```df.abs()```
 
-                returns the standard deviation
+                Returns the standard deviation
                 
                 ```df.std()```
 
-                return the variance
+                Return the variance
                 
                 ```df.var()```
 
-                return the covariance between two Series or 
+                Return the covariance between two Series or 
                 a covariance matrix for all columns combinations in DataFrame 
                 
                 ```df.cov()```
 
-                returns correlation between two Series 
+                Returns correlation between two Series 
                 or a correlation matrix for all columns in a DataFrame
                 
                 ```df.corr()```             
                 
-                gets specific quantile
+                Gets specific quantile
                 
                 ```df.quantile()```        
                 
-                returns cumulative sum
+                Returns cumulative sum
                 
                 ```df.cumsum()```          
                 
-                returns cumulative minimum
+                Returns cumulative minimum
                 
                 ```df.cummin()```           
                 
-                returns cumulative maximum
+                Returns cumulative maximum
                 
                 ```df.cummax()```           
                 
 
-                #SERIES METHODS
+                #### SERIES METHODS
                 
-                gets distinct values od the column
+                Gets distinct values od the column
                 
                 ```series.unique()```           
                 
-                returns frequency of values
+                Returns frequency of values
                 
                 ```series.value_counts()```      
 
-                gets the most common value of the series
+                Gets the most common value of the series
                 
                 ```series.mode()```             
                 
-                its acummulative sum
-                
-                ```df.column.cumsum()```        
-                
-                returns corellation between 2 integer values (very useful)
+                       
+                Returns corellation between 2 integer values (very useful)
                 
                 ```df.column.corr()```           
 
@@ -175,35 +176,35 @@ def pandas():
 
                 #### INDEX METHODS
 
-                finds the location of maximum value in the index
+                Finds the location of maximum value in the index
                 
                 ```argmax()```                  
                 
-                finds the location of minimum value in the index
+                Finds the location of minimum value in the index
 
                 ```argmin()```             
                 
-                check whether the index contains a value
+                Check whether the index contains a value
                 
                 ```contains()```               
                 
-                compare the index to another Index object for equality
+                Compare the index to another Index object for equality
                 
                 ```equals()```
 
-                check if the index values are in list of values and return an array of Booleans
+                Check if the index values are in list of values and return an array of Booleans
                 
                 ```isin()```                    
                 
-                find the min max value in the index
+                Find the min max value in the index
                 
                 ```max() / min()```             
                 
-                get number of unique values in the index
+                Get number of unique values in the index
                 
                 ```nunique()```                 
                 
-                create frequency table for the unique values in the index
+                Create frequency table for the unique values in the index
 
                 ```value_counts()```             
                 
