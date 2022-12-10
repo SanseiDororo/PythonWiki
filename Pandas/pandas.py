@@ -72,7 +72,7 @@ def pandas():
         st.write(
             """
             
-                # DATAFRAME METHODS
+                #### DATAFRAME METHODS
 
                 returns basic statistics 
                 
@@ -173,20 +173,42 @@ def pandas():
 
 
 
-                #INDEX METHODS
+                #### INDEX METHODS
 
-                argmax()                  - finds the location of maximum value in the index
-                argmin()                  - finds the location of minimum value in the index
-                contains()                - check whether the index contains a value
-                equals()                  - compare the index to another Index object for equality
-                isin()                    - check if the index values are in list of values and return an array of Booleans
-                max() / min()             - find the min max value in the index
-                nunique()                 - get number of unique values in the index
-                value_counts()            - create frequency table for the unique values in the index
+                finds the location of maximum value in the index
+                
+                ```argmax()```                  
+                
+                finds the location of minimum value in the index
 
+                ```argmin()```             
+                
+                check whether the index contains a value
+                
+                ```contains()```               
+                
+                compare the index to another Index object for equality
+                
+                ```equals()```
+
+                check if the index values are in list of values and return an array of Booleans
+                
+                ```isin()```                    
+                
+                find the min max value in the index
+                
+                ```max() / min()```             
+                
+                get number of unique values in the index
+                
+                ```nunique()```                 
+                
+                create frequency table for the unique values in the index
+
+                ```value_counts()```             
                 
 
-                #AGGREGATION
+                ##### AGGREGATION
 
                 df.groupby(["col1", "col2", "col3"]).col.agg[("mean","min","max")]
 
