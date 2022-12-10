@@ -31,8 +31,9 @@ def main():
         "External Libraries",
         "Distributing",
         "Isolation",
+        "Pandas",
         "TensorFlow",
-        "Pandas"
+        
     ]
     sub_page = st.sidebar.selectbox("Menu", menu)
 
@@ -54,10 +55,10 @@ def main():
         distributing()
     elif sub_page == "Isolation":
         isolation()
-    elif sub_page == "TensorFlow":
-        tensor()
     elif sub_page == "Pandas":
         pandas()
+    elif sub_page == "TensorFlow":
+        tensor()
     else:
         pass
 
