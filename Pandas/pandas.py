@@ -232,12 +232,12 @@ def pandas():
 
             Example data frame
 
-            index | column1 | column2 | column2
-            ------------------------------------
-            row 1 | value   | value   | value
-            row 2 | value   | value   | value
-            row 3 | value   | value   | value
-            row 4 | value   | value   | value
+            |index | column1 | column2 | column2  |
+            |------|---------|---------|--------- |
+            |row 1 | value   | value   | value    |
+            |row 2 | value   | value   | value    |
+            |row 3 | value   | value   | value    |
+            |row 4 | value   | value   | value    |
 
             
             CREATING PANDAS SERIES
