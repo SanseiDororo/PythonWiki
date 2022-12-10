@@ -23,7 +23,18 @@ def pandas():
     with st.expander("Basics"):
         st.write(
             """
-                
+                * Checking pandas Version:
+                  ```pd.show_versions()```
+
+                * Import declaration:
+                ```import pandas as pd```
+
+                * Reading the csv_file:
+                ```df_to_store = pd.read_csv('file.csv')```
+
+                * Defining the output colums and index
+                ```df_to_store = pd.read_csv('file.csv', usecols=['col1', 'col2', 'col3'], index_col = 'col1')```
+
 
             """
         )
