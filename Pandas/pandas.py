@@ -80,7 +80,7 @@ def pandas():
         st.write(
             """
             
-                #### DATAFRAME METHODS
+               DATAFRAME METHODS
 
                 Returns basic statistics 
                 
@@ -157,7 +157,7 @@ def pandas():
                 ```df.cummax()```           
                 
 
-                #### SERIES METHODS
+                SERIES METHODS
                 
                 Gets distinct values od the column
                 
@@ -178,7 +178,7 @@ def pandas():
 
 
 
-                #### INDEX METHODS
+                INDEX METHODS
 
                 Finds the location of maximum value in the index
                 
@@ -213,7 +213,7 @@ def pandas():
                 ```value_counts()```             
                 
 
-                ##### AGGREGATION
+                AGGREGATION
 
                 df.groupby(["col1", "col2", "col3"]).col.agg[("mean","min","max")]
 
