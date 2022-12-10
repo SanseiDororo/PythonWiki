@@ -27,8 +27,16 @@ def tensor():
                 * Constantly changing environments
                 * Gathering insights from extensive collections of data
 
-                Machine learning can be used on any subject which can be represented
-                with numbers.
+                Machine learning can be used on anything as long as you can convert it
+                into numbers and program it to find patterns.
+
+                Some of the most common Deep Learning use cases:
+
+                * Recommendation
+                * Translation
+                * Speech Recognition
+                * Computer vision
+                * Natural Language Processing
 
             """
         )
