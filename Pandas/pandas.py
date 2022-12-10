@@ -294,11 +294,11 @@ def pandas():
             We can stack methods
 
             ```
-                #returns first 3
-                datase.nlargest(ascending=True).head(3) 
+            #returns first 3
+            datase.nlargest(ascending=True).head(3) 
 
-                #returns 5 smallest values
-                datase.nsmallest(ascending=True, n = 5) 
+            #returns 5 smallest values
+            datase.nsmallest(ascending=True, n = 5) 
                 
             ```
  
