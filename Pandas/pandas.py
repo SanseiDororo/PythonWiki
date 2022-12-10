@@ -23,25 +23,25 @@ def pandas():
     with st.expander("Basics"):
         st.write(
             """
-                * Checking pandas Version:
+                Checking pandas Version:
                 
                 ```pd.show_versions()```
 
-                * Import declaration:
+                Import declaration:
                 
                 ```import pandas as pd```
 
-                * Reading the csv_file:
+                Reading the csv_file:
                 
                 ```
-                    df_to_store = pd.read_csv('file.csv')
+                df_to_store = pd.read_csv('file.csv')
 
-                    #Real world example with more parametres
-                    pd.read_csv('path_to_file.csv', sep=";", on_bad_lines="skip", lineterminator="\n")
+                #Real world example with more parametres
+                pd.read_csv('path_to_file.csv', sep=";", on_bad_lines="skip", lineterminator="\n")
                 
                 ```
 
-                * Use specific columns and define index
+                Use specific columns and define index
                 
                 ```df_to_store = pd.read_csv('file.csv', usecols=['col1', 'col2', 'col3'], index_col = 'col1')```
 
