@@ -37,7 +37,7 @@ def pandas():
                 df_to_store = pd.read_csv('file.csv')
 
                 #Real world example with more parametres
-                pd.read_csv('path_to_file.csv', sep=";", on_bad_lines="skip", lineterminator="\n")
+                pd.read_csv('path_to_file.csv', sep=";", on_bad_lines="skip", lineterminator="")
                 
                 ```
 
