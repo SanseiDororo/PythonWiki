@@ -263,7 +263,7 @@ def pandas():
 
             SORT VALUES
 
-            ```column1_values.sort_values()
+            ```column1_values.sort_values()```
             
             arguments 
             
@@ -272,6 +272,7 @@ def pandas():
 
             
             GET MAX VALUE IN THE INTEGER BASED SERIES
+            
             ```column1_values.max()```
 
 
