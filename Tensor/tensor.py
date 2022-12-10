@@ -66,6 +66,11 @@ def tensor():
                 and can be used for a wide range of applications, such as image and speech 
                 recognition, natural language processing, and many others.
 
+                Neural Network Data Flow:
+
+                Information Input => Translation Into Numbers => Learn Representation patterns =>
+                Representational Output => Output
+
             """
         )
        
