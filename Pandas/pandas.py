@@ -514,6 +514,76 @@ def pandas():
 
             """
         )
+
+    with st.expander("Sorting"):
+        st.write(
+            """
+            If we deal with the pandas serie, 
+            we can execute several methods for sorting values.
+
+            '''
+                df.sort_values(by="column_name", ascending = True, inplace=True)
+                df.sort_index()
+            '''
+            
+            RETURNING RELATIVE FREQUENCY
+
+            '''
+            pd.series.value_counts(normalize=True)
+            '''
+
+            RANKING VALUES
+
+            ```
+            df.column_name.rank(method="min", ascending=)
+            ```
+            
+            CHECK UNIQUE VALUES
+
+            ```
+            df.nunique()
+            ```
+            
+            GET THE LARGEST VALUE
+
+            ```
+            df.nlargest(n = 10, columns = ["column1","column2"])
+            df.column_name.idxmax()
+            ```
+            
+            GET THE MINIMUM VALUE
+
+            ```
+            df.column_name.idxmin( )
+            ```
+            
+
+            SORTING VALUES BY INDEX
+
+            ```
+            series.sort_index()
+            ```
+            
+
+            CREATING RANKS FOR SERIES
+
+            ```
+            df["df_rank"] = df.column.rank(method="min", ascendin= False)
+
+            cars["hp_rank"] = cars.horsepower.rank(method = "min", ascending = False)
+            ``
+
+            CORRELATION
+
+            ```
+            df.corr()
+            ```
+ 
+
+
+            """
+        ) 
+
     with st.expander("Arithmetic Operations"):
         st.write(
             """
@@ -988,4 +1058,15 @@ def pandas():
 
 
             """
-        )    
+        )  
+
+    with st.expander("Arithmetic Operations"):
+        st.write(
+            """
+            
+            
+ 
+
+
+            """
+        )      
