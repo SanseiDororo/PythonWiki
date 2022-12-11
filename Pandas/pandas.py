@@ -1049,11 +1049,97 @@ def pandas():
             """
         )  
 
-    with st.expander("Arithmetic Operations"):
+    with st.expander("Pivoting & Reshaping"):
         st.write(
             """
+            TRANSPOSE
+
+            The most basic technic is transpose. It is mostly used to 
+            make data presentation more intuitive. It should be avoided for 
+            the data analysis purposes.
+
+            Turning row in columns and columns to rows
+
+            ```df.T``` 
+
+            Range index become column name, column name becomes index
+
+            The same can be achived with the transponse method.
+
+            ```df.transpose()```
+
+            Transposing 2 times changes the datatype
+
+            PIVOTING
+
+            Transforms from the long format to the light format. It makes sense if 
+            we have very few categories. Works similar as unstack method.
+
+           ```
+            df.pivot(index = "column as index", columns="transforms unique values in colums", 
+            values="column which stores values")
+           ```
+
+            Filling missing values:
+
+            ```
+            .fillna(value)
+            ```
+
+            EXAMPLE
+
+            ```
+            table_piv = table.pivot(
+                index="Country", 
+                columns="Medal", 
+                values = "Count").fillna(0)
+            ```
+            Reshaping df and creating aggregations:
+
+            ```
+            df.pivot.table(
+                index ="column as index", 
+                columns="set columns from pandas series value", 
+                values="set values from pandas series", aggfunc="mean", 
+                fill_value=0)
             
+            margin parameter adds sum of values under the column ALL
+            ```
+            The same can be achieved by groupby method:
+            ```
+            df.groupby(["Country","Medal"]).Count.sum().unstack(fill_value=0)
+            ```
+
+            Create new column with sum
+
+            ```
+            df["new column"] = df.sum(axis=1)
+            ```
+
+            PD CROSSTAB
+
+            This is useful method for reshaping df.
+
+            Compute a simple cross-tabulation of two or more factors.
+
+            ```
+            pd.crosstab(series.column1, series.column2)
+            ```
+             
+            Same can be achieved with the groupby
+            ```
+            df.groupby(["column1","column2"]).column3.count().unstack()
+            ```
             
+            Provides same additional fucntions as pivot.
+            
+            MELTING DATAFEAME
+
+            This is an opposite method of pivoting.
+
+            ```
+            df.melt(id_vars="pandas series", value_vars="series1", "series2", "series3")
+            ```
  
 
 
