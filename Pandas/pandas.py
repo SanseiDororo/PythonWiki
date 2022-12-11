@@ -45,25 +45,6 @@ def pandas():
                 
                 ```df_to_store = pd.read_csv('file.csv', usecols=['col1', 'col2', 'col3'], index_col = 'col1')```
 
-                DATA PREPARATION
-
-                In most cases data comes with the headers and unorganized.
-
-                To remove headers and tail and define labels, we use the following parametres
-                in the pd.read_csv method:
-
-                skiprows = number of rows
-                skipfooter = number of rows
-                header = None 
-                names = array of column names
-
-                Example:
-
-                ```pd.read_csv("cars_raw.csv", skiprows= 2, skipfooter= 1, header = None, names = labels)```
-
-                EXPORTING THE DATA 
-
-                ```df.to_csv("file.csv")```
 
             """
         )
