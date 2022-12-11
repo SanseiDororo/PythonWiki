@@ -889,12 +889,91 @@ def pandas():
 
             """
         ) 
-    with st.expander("Arithmetic Operations"):
+    with st.expander("Merging"):
         st.write(
             """
+            CONCATINATING, JOINING, MERGING DATA
+
+            In the real case scenarios we have to combine data from different sources.
+            This is why we have to add, join and merge data.
+
+            Sometimes we need to insert the column, if it is missing in the df.
+
+            ```
+            df2.insert(column_number, "column_name", "value")
+            ```
+
+            Making columns equal for both dfs:
+
+            ```
+            df1.columns = df2.columns
+            ```
             
+            COMBINING TWO DATA SETS VERTICALLY
+
+            ADDING
+
+            ```
+                df1 = pd.read_csv('df1.csv')
+                df2 = pd.read_csv('df2.csv')
+
+                df1.append(df2, ignore_index=False) 
+            ```
             
- 
+
+            CONCATINATING
+
+            ```
+            pd.concat([df1, df2], ignore_index= False, keys = None) 
+            ```
+            
+            We can define keys in order to preserve information about origin
+
+            ```
+            pd.concat([df1, df2], ignore_index= False, keys = [df1, df2])
+            ```
+            
+            We can define name for the outer outer index
+            ```
+            pd.concat([df1, df2], ignore_index= False, keys = [df1,df2], name=["name"])
+            ```
+            
+            Concatinating differnt columns
+
+            When we are concatinating two dfs with different columns 
+            its good option to drop the unwanted columns first.
+
+            ```
+            df.drop(labels = ["unwanted column", axis = 1, inplace = True])
+            pd.concat([df1, df2], ignore_index= False, keys = [df1, df2])
+            ```
+            
+
+            ARITHMETIC BETWEEN PANDAS OBJECT
+
+            ```
+                df1 = pd.read_csv('df1')
+                df2 = pd.read_csv('df2')
+            ```
+            
+            First we need to align columns with the rename method.
+
+            We need to set common index:
+            ```
+            df1.set_index("column", inplace=True)
+            df2.set_index("column", inplace=True)
+            ```    
+            
+            Than we can perform aggregation methods:
+            ```
+            df1.add(df2, fill_value=0)
+            ```
+            We can aswell subtract values with the sub method
+
+            ```
+            df1.add(df2, fill_value=0)
+
+            ```
 
 
             """
