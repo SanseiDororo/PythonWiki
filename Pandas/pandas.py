@@ -137,6 +137,149 @@ def pandas():
 
             """
         )
+
+    with st.expander("Indexing"):
+        st.write(
+            """
+            
+            FETCHING THE COLUMN
+
+            ```
+                df.column_name
+                df["column_name"]
+                df[["column1","column2"] + [col for col in df.columns if col.startwith('string')]]
+                df[["column1","column2"]][index1:index2]
+            ```
+            
+
+            ILOC OPERATOR - POSITION BASED INDEXING
+
+            Iloc operator returns the value by its numerical position. 
+            Dataframes are onedimensional arrays with the horizontal
+            and vertical position. For example
+
+            |index | column1 | column2 | column2|
+            |------|---------|---------|--------|
+            |row 1 | value   | value   | value|
+            |row 2 | value   | value   | value|
+            |row 3 | value   | value   | value|
+            |row 4 | value   | value   | value|
+
+            
+            VALUES CAN BE RETRIEVED BY THE POSITION
+
+            Returning first row
+            ```
+            df.iloc[0] 
+            ```
+            Returning value of the second column of row 1
+            
+            ```
+            df.iloc[0,1]  
+            ```
+            
+            Iloc can return series of records and arrays of colums.
+
+            ```
+            Returns series of records from 0 to 10 and columns 1, 3, 4
+            
+            df.iloc[:10, [0,2,3]]  
+            ```
+            
+            LOC OPERATORS - POSITIONING BASED ON NAMES
+
+            Loc operators return the values according to the label indexing
+
+            ```
+            Returns value for the row1
+            df.loc["row1"] 
+            
+            Returns column1 and column2 values for the row1
+            df.loc["row1", ["column1", "column1"]] 
+            
+            Returns all rows but only values for column1 and column2
+            df.loc[:,["column1","column1"]]  
+
+            
+            RENAMING COLUMN NAMES
+            
+            ```
+            df.rename(columns= {"column1":"c1", "column2":"c2", "column3":"c3", "column3":"c3"})
+            ```
+            
+            INSPECTING INDEX TYPE
+
+            ```
+            df.index
+            ```
+
+            SETTING INDEX
+
+            We can chose any column and set it as index with the set.index method
+
+            ```
+            dataset.set_index("name", inplace=True)
+            ```
+            
+            EXAMPLE
+            ```
+            cars.set_index(["model_year", "origin"], inplace = True)
+            
+            ```
+            
+            ASSIGNING NAME TO THE INDEX
+            ```
+            dataset.index.name = "name of the index"
+            ```
+            
+            SORTING INDEX
+            ```
+            df.sort_index(ascending=True, inplace=True)
+            ```
+            
+            SWAPPING MULTILEVEL INDEX
+            ```
+            df = df.swaplevel().sort_index(ascending=True)
+            ```
+            
+            RESETING INDEX
+            ```
+            cars.reset_index(inplace = True) : inplace argument saves the changes 
+            ```
+            
+
+            CHECKING IF THERE ARE UNIQUE VALUES FOR THE INDEX
+            ```
+            dataset.index.is_unique
+            ```
+            
+
+            MULTIPLE INDEXES
+
+            |index|    index2   | column1 | column2 | column2|
+            |-----|-------------|---------|---------|--------|
+            |row 1|    ind1     | value   | value   | value|
+            |row 2|             | value   | value   | value|
+            |row 3|    ind2     | value   | value   | value|
+            |row 4|             | value   | value   | value|
+
+            To drop one level index we can use the method:
+
+            ```
+            datagrame.droplevel(-1)
+            ```
+            
+
+            CHECKING NUMBER OF UNIQUE VALUES
+
+            ```
+            df.nunique()
+            ```
+ 
+
+
+            """
+        ) 
     
     with st.expander("Statistics"):
         st.write(
