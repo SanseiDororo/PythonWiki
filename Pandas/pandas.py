@@ -545,6 +545,207 @@ def pandas():
             """
         )  
 
+    with st.expander("Filtering"):
+        st.write(
+            """
+            
+            FILTERING DATA
+
+            Creating masks to isolate the data:
+
+            ```
+                mask1 - returns array of the boolean values
+                mask1 = df.column1 == "12"
+                mask2 = df.column2 == "string"                
+            ``
+
+
+            Easier method for filtering the data without creating masks is:
+            
+            ```df.loc[(df.column1 == "value") & (df.column2 == value)]```
+            
+
+            We can use mask to perform filtering on the dataframes
+
+            ```
+            value_12 = df.loc[mask1].copy()
+            ```
+            
+            AND OPERATOR
+
+            ```
+            value_12_string = df.loc[mask1 & mask2].copy()
+            ```
+
+            BETWEEN OPERATOR
+
+            ```
+            returns values of the column1 between 1 and 5
+            value_between = df.loc[df.column1.between(1,5)].copy()
+            ```
+
+            NOT OPERATOR 
+
+            is designated by the tilde sign ~
+
+            ```
+            returns records which doesn't have values 12 and 13 but just the second and the third column
+            not_12_13_value = df.loc[~df.column1.isin(12,13), ["column2","column3]].copy()
+            ```
+
+            MANIPULATING ELEMENTS IN THE DATA FRAME
+
+            Defining value for the whole panda series
+
+            ```
+            column1_40 = df.loc[df.column1 > 40].copy()
+            column1_40 = 40
+            ```
+            
+            Changes all the values of column1 which are greater than 40 to the value 40
+
+            ** Chaining indexes should be avoided. **
+
+            
+            When we want to filter the data we first need to make data mask.
+
+            ```
+            mask1 = df.column == value
+            mask2 = df.column < value
+
+            This creates a boolean series.
+            ```
+            To filter the data we need to:
+
+            ```filtered_data = df.loc[mask1].copy()```
+
+            We can as well define varios conditions when filtering the data:
+
+            ```filtered_data = df.loc[mask1 & mask2].copy()```
+
+            OPERATORS
+
+            AND
+            
+            ```filtered_data = df.loc[mask1 & mask2].copy```
+
+            NOT
+            
+            ```
+            not_value1_2 = df.loc
+            [~df.column.between(value1, value2), 
+            ["column1", "column2"]].copy()
+            ```
+
+            BETWEEN
+            
+            ```filtered_data = df.loc
+            [df.column.between(value1,value2, inclusive=True)]
+            ```
+            ISIN
+            
+            ```filtered_data = df.loc
+            [df.column.isin([value1,value2]), 
+            ["column1","column2"] inclusive=True)]
+            ```
+            
+            CHAINING METHODS
+
+            ```df[df["column1]=="value"]["column2"].value_counts()```
+
+            Example
+
+            ```
+                bank[bank["employee"]=="unemployed"]["education"].value_counts()
+                bank[bank["employee"]=="unemployed"]["age"].mean()
+            ```        
+
+            """
+        )  
+
+    with st.expander("Grouping"):
+        st.write(
+            """
+            Group by operation is very useful and important 
+            in the data analysis process, since it returns aggregated data
+
+            CREATE GROUP BY OBJECT:
+
+            ```df.groupby("key1","key2")```
+
+            To see the groups produced, we need to store the object into the 
+            df and call group methods.
+
+            ```
+            df = df.groupby(["key1","key2"])
+            df.groups
+            ```
+            
+
+            CHAINING METHODS
+
+            ```
+            df_mean = df.groupby("key").columname.mean()
+            ```
+
+            EXAMPLE:
+            
+            ```
+            mpg_by_year = cars.groupby("model_year").mean().round(2)
+
+            mpg_year_origin = cars.groupby(["model_year", "origin"]).mpg.mean().unstack().round(2)
+            ```
+        
+
+            ADVANCED AGGREGATIONS
+
+            With the aggregation function which accepts various parametres, we can define 
+            various aggregated values
+
+            ```
+            df = df.groupby("key1", "key2").column.agg(["min","max"]).unstack().round(2)
+            ```
+
+            EXAMPLE
+            
+            ```
+            cars.groupby(["model_year", "origin"]).mpg.agg(["mean", "max", "min"]).unstack().round(2)
+            ```
+            
+            APPLYING CUSTOM METHODS
+
+            With the groupby objects we can aswell use the custom methods.
+
+            Step one is to provide the method:
+
+            EXAMPLE
+            ```
+                def get_most_efficient(group):
+                    return group.nlargest(n = 2, columns = "mpg").loc[:, ["name", "mpg"]]
+            ```
+            
+            Step 2 is to apply it
+            
+            EXAMPLE
+
+            ```
+            most_eff = cars.groupby(["model_year", "origin"]).apply(get_most_efficient)
+            ```
+            
+            CREATING NEW PANDAS SERIES AND STORING ITS VALUES TO NEW COLUMN
+
+            ```
+            df["new_column_name"] = df.groupby(["key1", "key2"]).transform("mean").round(2)
+            ```
+            
+            EXAMPLE
+            
+            ```
+            cars["group_mpg"] = cars.groupby(["model_year", "origin"]).mpg.transform("mean").round(2)
+            ```
+
+            """
+        ) 
     with st.expander("Arithmetic Operations"):
         st.write(
             """
