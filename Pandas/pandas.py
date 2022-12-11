@@ -1146,11 +1146,116 @@ def pandas():
             """
         )  
 
-    with st.expander("Arithmetic Operations"):
+    with st.expander("Plotting"):
         st.write(
             """
+            There are several libraries for plotting the data. Most common is Matplotlib.
+
+            IMPORTING
+
+            ```
+            import pandas as pd
+            import numpy as np
+            import matplotlib.pyplot as plt
+            import seaborn as sns
+            ```
+            
+
+            SETTING STYLE
+
+            ```
+            plt.style.use("seaborn")
+            ```
             
             
+            CREATE PLOT
+            
+            ```
+            df.plot()
+            plt.show()
+            ```
+            
+            There are multiple parametres to define the output()
+
+            * sublot          - create sublot for each data series
+            * sharex          - subplots share x axis
+            * figsize         - define size of the plot figure
+
+            
+
+            HISTOGRAM
+
+            ```
+                df.column_name.hist(figsize=(15,15), bins=number_of_bins)
+                plt.title("Define the title of the plot", fontsize=value)
+                plt.xlabel("Define the label for the x axis", fontsize=value)
+                plt.ylabel("Define the label for the y axis", fontsize=value)
+            ```
+            
+
+            SCATTERPLOT
+
+            ```
+            df.plot(kind="scatter", x="column_name", y="column_name", figsize=(value1,value2), c="column_name", marker="marker_type", colormap="color_map")
+            plt.title("Define the title of the plot", fontsize=value)
+            plt.xlabel("Define the label for the x axis", fontsize=value)
+            plt.ylabel("Define the label for the y axis", fontsize=value)
+            ```
+            
+            COUNT PLOT 
+
+            ```
+            plt.figure(figsize=(12,8))
+            sns.set(font_scale=1.5, palette="viridis")
+            sns.countplot(data = df, hue = "column1", x = "column2")
+            plt.show()
+            ```
+            
+
+            BAR PLOT
+
+            ```
+            plt.figure(figsize=(12,8))
+            sns.set(font_scale=1.5)
+            sns.barplot(data = df, x = "column1", y = "column2", dodge = True)
+            plt.show()
+            ```
+            
+
+            POINT PLOT
+            
+            ```
+            plt.figure(figsize=(12,8))
+            sns.set(font_scale=1.5)
+            sns.pointplot(data = cars, x = "model_year", y = "mpg", hue = "origin", dodge = True, ci = 95)
+            plt.show()
+            ```
+            
+
+            LM PLOT
+
+            ```
+            sns.set(font_scale=1.5)
+            sns.lmplot(data = cars, x = "weight", y = "horsepower", col = "origin")
+            plt.show()
+            ```
+            
+
+            HEAT MAP
+            ```
+            plt.figure(figsize=(12,8))
+            sns.set(font_scale=1.4)
+            sns.heatmap(cars.corr(), annot= True, cmap = "Reds")
+            plt.show()
+            ```
+            
+
+            PAIR PLOT
+            ```
+            sns.set(font_scale=1.5)
+            sns.pairplot(data = cars, kind = "scatter")
+            plt.show()
+            ```
  
 
 
