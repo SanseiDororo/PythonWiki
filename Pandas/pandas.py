@@ -45,9 +45,65 @@ def pandas():
                 
                 ```df_to_store = pd.read_csv('file.csv', usecols=['col1', 'col2', 'col3'], index_col = 'col1')```
 
+                DATA PREPARATION
+
+                In most cases data comes with the headers and unorganized.
+
+                To remove headers and tail and define labels, we use the following parametres
+                in the pd.read_csv method:
+
+                skiprows = number of rows
+                skipfooter = number of rows
+                header = None 
+                names = array of column names
+
+                Example:
+
+                ```pd.read_csv("cars_raw.csv", skiprows= 2, skipfooter= 1, header = None, names = labels)```
+
+                EXPORTING THE DATA 
+
+                ```df.to_csv("file.csv")```
 
             """
         )
+    
+    with st.expander("Importing Data"):
+        st.write(
+            """
+            Importing messy data is the most common task. we first need
+            to consolidate the data set before we can start deriving valuable information
+
+            We can import data from various sources: csv, excel, html. The methods are
+
+            *   pd.read_csv('')
+            *  pd.read_excel('')
+            * pd.read_html('')   
+
+
+            SKIPPING ROWS & DELETING UNWANTED ENTRIES
+
+            ```pd.read_csv('filename.csv', skiprows = n)```
+
+            
+
+            SKIPPING FOOTER 
+
+            ```pd.read_csv('filename.csv', skipfooter = n)```
+
+
+            SKIPPING HEADER
+
+            ```pd.read_csv('filename.csv', Header = None)```
+
+
+            SETTING LABELS FOR HEADER
+
+            ```pd.read_csv('filename.csv', names = [])```
+
+
+            """
+        )    
 
     with st.expander("Dataframe Inspection"):
         st.write(
@@ -374,7 +430,16 @@ def pandas():
             
             df["column_name"] = series
             
-            ASSIGNING NAMES TO THE GROUPS.
+            ASSIGNING NAMES TO THE GROUPwith st.expander("Arithmetic Operations"):
+        st.write(
+            """
+            
+            
+ 
+
+
+            """
+        )    S.
             
             df.groupby("column_name").column_name1.mean()
             
@@ -428,8 +493,35 @@ def pandas():
     with st.expander("Custom Functions"):
         st.write(
             """
-            
+            CUSTOM FUNCTIONS IN PANDAS
 
+            We can create custom functions in order to filter or manipulate 
+            data according to our specific needs.
+
+            Methods to use custom functions are:
+
+            apply()
+            applymap()
+
+            EXAMPLE:
+
+            ```def range(series):
+                return series.max() - series.min()```
+
+            ```df.apply(range, axis = 0)```
+
+            It is much simpler to use anonymous rather than custom functions
+
+            ```df.apply(lambda x: x.max()- x.min(), axis=0)```
+
+            APPLYING USER DEFINED FUNCTION ON SPECIFIC ROWS WITH THE ILOC OPERATOR
+
+            ```df.iloc[:, 1:3].applymap(lambda x: x[0])```
+
+            CUSTOM FUNCTION FOR DEFINING RANGE BETWEEN HIGHEST 
+            AND LOWEST VALUE OF NUMERICAL COLUMNS
+
+            ```df.iloc[:, :-2].apply(lambda x: x.max() - x.min(), axis = 0)```
 
             """
         )  
