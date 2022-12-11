@@ -308,4 +308,150 @@ def pandas():
 
             """
         )
-       
+    with st.expander("Arithmetic Operations"):
+        st.write(
+            """
+            
+            With Pandas we can perform arithmetic operations on pandas data series.
+
+            ADDITION 
+
+            df.column1.add(df.column2)
+            add method allows to define additional arguments:
+
+            a) Replacing NaN with 0
+
+            df.column1.add(df.column2, fill_value=0)
+
+            df.column1 + df.column2
+
+            To store data under new column:
+
+            df["new_column"] = df.column1.add(df.column2)
+
+            EXAMPLE:
+
+            cars.model_year = cars.model_year.add(1900)
+
+            MULTIPLICATION
+
+            df.column1 * df.column2 
+            df.column1.mul(df.column2, fill_value=0)
+
+
+            SUBTRACTION
+
+            df.column1.sub(df.column2, fill_value=0)
+
+        
+            DIVISION
+
+            df.column1.div(df.column2)
+
+
+            """
+        )   
+    with st.expander("Binning & Discretisation"):
+        st.write(
+            """
+            
+            DISCRETIZATION & BINNING
+
+            #Bin is subarray or group
+            defining_bins [1,2,3,4,5]
+            
+            series = pd.cut(df.column, defining_bins, right = False)
+            
+            1. parameter - column
+            2. parameter - bins (instead of predefined array we can pass integer as an argument. 
+               This comes handy when we don't know the edges of the group. 
+               Equal bins create equal width bins)
+            3. parameter - right, indicate whether bins include right most edge or not
+            
+            series.value_counts - returns values for the bins
+            
+            CREATE NEW PANDAS SERIES
+            
+            df["column_name"] = series
+            
+            ASSIGNING NAMES TO THE GROUPS.
+            
+            df.groupby("column_name").column_name1.mean()
+            
+            group_names = ["", "", "", "", "", ""]
+            
+            Example:
+            
+            pd.cut(titanic.age, age_bins, right=False, labels=group_names)
+            
+            pd.qcut - quantile based discretization function which discretisize series 
+            into equal-size buckets based on rank or sample quantities.
+            
+            Example:
+            
+            pd.qcut(df.column, 5) - creates 5 groups of equal weight
+            
+            We can as well pass user defined quantiles as a parameter.
+            
+            pd.qcut(df.column, [value1, value2, value3, value4, value5], labels=["label1", "label2", "label3", "label4", "label5"])
+
+
+            """
+        )  
+    
+    with st.expander("Caps & Flors"):
+        st.write(
+            """
+            CAPS & FLOORS
+
+            On dfs we need to define tresholds in order to exclude outliers 
+            which may distort the data perspective.In most cases we cut caps and floors.
+
+            Example:
+
+            series_cap = value
+            series_floor = value
+
+            Overriding values above setted cap with the new value
+
+            df.loc[df.column > value, "column_name"] = value
+            df.loc[df.column > value, "column_name"] = value
+
+            Example:
+
+            cars.loc[cars.mpg > 40, "mpg"] = 40
+
+
+            """
+        )
+
+    with st.expander("Custom Functions"):
+        st.write(
+            """
+            
+
+
+            """
+        )  
+
+    with st.expander("Arithmetic Operations"):
+        st.write(
+            """
+            
+            
+ 
+
+
+            """
+        )  
+
+    with st.expander("Arithmetic Operations"):
+        st.write(
+            """
+            
+            
+ 
+
+
+            """
+        )    
