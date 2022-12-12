@@ -60,7 +60,7 @@ def main():
     elif sub_page == "Pandas":
         pandas()
     elif sub_page == "Numpy":
-        pandas()
+        numpy()
     elif sub_page == "TensorFlow":
         tensor()
     else:
