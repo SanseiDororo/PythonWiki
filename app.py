@@ -14,6 +14,7 @@ from Distributing.distributing import distributing
 from Isolation.isolation import isolation
 from Tensor.tensor import tensor
 from Pandas.pandas import pandas
+from Numpy.numpy import numpy
 
 
 the_truth = zen()
@@ -32,6 +33,7 @@ def main():
         "Distributing",
         "Isolation",
         "Pandas",
+        "Numpy",
         "TensorFlow",
         
     ]
@@ -56,6 +58,8 @@ def main():
     elif sub_page == "Isolation":
         isolation()
     elif sub_page == "Pandas":
+        pandas()
+    elif sub_page == "Numpy":
         pandas()
     elif sub_page == "TensorFlow":
         tensor()

@@ -1180,16 +1180,17 @@ def pandas():
             * sublot          - create sublot for each data series
             * sharex          - subplots share x axis
             * figsize         - define size of the plot figure
+            *
 
             
 
             HISTOGRAM
 
             ```
-                df.column_name.hist(figsize=(15,15), bins=number_of_bins)
-                plt.title("Define the title of the plot", fontsize=value)
-                plt.xlabel("Define the label for the x axis", fontsize=value)
-                plt.ylabel("Define the label for the y axis", fontsize=value)
+            df.column_name.hist(figsize=(15,15), bins=number_of_bins)
+            plt.title("Define the title of the plot", fontsize=value)
+            plt.xlabel("Define the label for the x axis", fontsize=value)
+            plt.ylabel("Define the label for the y axis", fontsize=value)
             ```
             
 
