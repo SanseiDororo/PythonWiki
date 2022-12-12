@@ -20,9 +20,38 @@ def numpy():
     st.write("")
     st.write("")
 
-    with st.expander("Basics"):
+    with st.expander("DataTypes & Attributes"):
         st.write(
             """
+                Numpy main object is ndarray which stands for n-dimensional array.
+
+                Lists can be converted into ndarray with the np.array function.
+
+                ```
+                #CHANGING PYTHON LIST INTO ARRAY
+                l = list(range(1,11)) 
+
+                Change list into numpy array container
+
+                array = np.array(l)
+
+                ```
+
+                Create arrays of zeros or ones:
+
+                ```
+                np.zeros([2,3])
+                np.ones([3,2])
+                ```
+
+                Numpy array contains only one data type and this is the major difference 
+                between ordinary python lists and np arrays.
+
+                To check what kind of data np array stores, we use:
+
+                ```
+                array.dtype
+                ```
 
             """
         )
