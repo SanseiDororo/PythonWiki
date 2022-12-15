@@ -37,11 +37,28 @@ def numpy():
 
                 ```
 
+            """
+        )
+
+    with st.expander("Arrays"):
+        st.write(
+            """
+                There are numerous ways to create arrays with numpy.
+
                 Create arrays of zeros or ones:
 
                 ```
+                #Zeros array
                 np.zeros([2,3])
+                
+                #Ones array
                 np.ones([3,2])
+
+                #Range array
+                np.arange(start,stop,step)
+
+                #Random array
+                random_array = np.random.randint(1,25, size=(2,2))
                 ```
 
                 Numpy array contains only one data type and this is the major difference 
@@ -51,9 +68,80 @@ def numpy():
 
                 ```
                 array.dtype
-                ```
+                ``` 
 
             """
         )
+
+    with st.expander("Random"):
+        st.write(
+            """
+                Numpy provides several methods for generating random numbers.
+
+                The key for creating random numbers is defined by the seed.
+
+                ```
+                np.random.seed()
+
+                ```
+                To create random array of any shape, we can use
+
+                ```
+                np.random.random()
+
+                ```
+
+                To find unique values in array, we can use
+
+                ```
+                np.unique('given array')
+                ```
+                
+
+            """
+        )
+
+    with st.expander("Matrices"):
+        st.write(
+            """
+                One dimensional array is refered as a vector, while arrays of
+                higher dimensions are refered as matrices.
+
+                We can retrieve elements in matrices by indexing.
+
+                ```
+                array[0] => returns first row
+                array[0][0] => returns first element of the first row
+                array[:1,:1] => returns first element of the first row
+                array[:3,:1] => returns first element for the first three rows
+                ```
+
+                
+
+            """
+        )
+    with st.expander("Manipulation"):
+        st.write(
+            """
+                Numpy allows vector operations. We can perform
+                arithmetic operations for given n dimensional arrays.
+
+                ```
+                a_one = [1,2,3]
+                a_ones = [1,1,1]
+
+                a_one + a_ones = [2,3,4]
+                a_one - a_ones = [0,2,3]
+
+                ``` 
+
+                When performing arithmetic operations on n dimensional array numpy uses
+                broadcasting. It is extremely important to understand associated limitations.
+                
+                [Broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html)
+
+            """
+        )
+    
 
    
