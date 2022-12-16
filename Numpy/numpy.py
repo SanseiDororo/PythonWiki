@@ -133,15 +133,60 @@ def numpy():
                 a_one + a_ones = [2,3,4]
                 a_one - a_ones = [0,2,3]
 
+                #Squaring all the numbers
+                np.square(a_one) = [1,4,9]
+
                 ``` 
 
                 When performing arithmetic operations on n dimensional array numpy uses
                 broadcasting. It is extremely important to understand associated limitations.
                 
                 [Broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html)
+                [Supported Mathematical Functions](https://numpy.org/doc/stable/reference/routines.math.html)
 
             """
         )
-    
+
+    with st.expander("Aggregation"):
+        st.write(
+            """
+                Numpy provides several functions to aggreate items in n dimensional array.
+
+                * np.sum() = sums items in array 
+                * np.mean() = finds mean of the items in array
+                * np.max() = finds item with max value in array
+                * np.min() = finds item with minimal value in array
+                * np.std() = finds standard deviation in array
+                * np.var() = difference between numbers in array
+
+                Standard deviation = square root of variance
+                Standard deviation and variance are measurements for spread of data.
+                
+                Standard deviation is a statistical measure that describes how spread out a set of data is. It is calculated by taking the square root of the variance, which is the average of the squared differences from the mean.
+
+                To calculate the standard deviation of a set of data, you first need to 
+                calculate the mean, or average, of the data. Then, for each data point, 
+                you subtract the mean and square the result. Finally, you take the average 
+                    of these squared differences and take the square root of the result.
+            """
+        )
+    with st.expander("Reshape & Transpose"):
+        st.write(
+            """
+                Numpy provides functions to manipulate the shape of the n dimensional arrays.
+
+                We can reshape array with:
+                ```
+                example = [3,2]
+                example.reshape(3,2,1) 
+                ```
+
+                Transpose switch axisis.
+
+                ```
+                example.T
+                ```
+            """
+        )
 
    
