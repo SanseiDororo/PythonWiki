@@ -81,4 +81,41 @@ def tensor():
 
             """
         )
-       
+    with st.expander("Basic Tensors"):
+        st.write(
+            '''
+            Tensors are multidimensional arrays with a uniform type. There are several
+            functions which allows us to create tensors. As integers in python tensors
+            are immutable.
+
+            BASIC TENSOR OBJECT:
+
+            We can initialise tensor object with constant() or Variable().
+
+            * scalar = tf.constant(6)
+            * vector = tf.constant([2.0,3.0,4.5])
+
+            tf.Variable is class that represents mutable tensor. In opposition to a
+            constant tensors, we can change values in mutable tensors with the assign method.
+
+            * example = tf.Variable(1.) => example.assign(2.)
+
+            GENERATING RANDOM TENSOR
+
+            * random_tensor = tf.random.Generator.from_seed(37)
+
+            SHUFFLE TENSOR
+
+            * tf.random.shuffle()
+
+            GENERATING TENSOR FROM NUMPAY ARRAY
+
+            * ones = tf.ones([3,2])
+            
+
+
+
+        
+        
+            '''
+        )   
