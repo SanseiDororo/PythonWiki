@@ -26,6 +26,7 @@ def tensor():
                 * Challenges whith extensive list of rules
                 * Constantly changing environments
                 * Gathering insights from extensive collections of data
+                *
 
                 Machine learning can be used on anything as long as you can convert it
                 into numbers and program it to find patterns.
