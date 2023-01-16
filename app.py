@@ -15,7 +15,7 @@ from Isolation.isolation import isolation
 from Tensor.tensor import tensor
 from Pandas.pandas import pandas
 from Numpy.numpy import numpy
-from Altair import altair
+from Altair.altair import altair
 
 
 the_truth = zen()
