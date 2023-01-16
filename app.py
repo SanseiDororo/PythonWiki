@@ -15,6 +15,7 @@ from Isolation.isolation import isolation
 from Tensor.tensor import tensor
 from Pandas.pandas import pandas
 from Numpy.numpy import numpy
+from Altair import altair
 
 
 the_truth = zen()
@@ -35,6 +36,7 @@ def main():
         "Pandas",
         "Numpy",
         "TensorFlow",
+        "Altair",
         
     ]
     sub_page = st.sidebar.selectbox("Menu", menu)
@@ -63,6 +65,8 @@ def main():
         numpy()
     elif sub_page == "TensorFlow":
         tensor()
+    elif sub_page == "Altair":
+        altair()
     else:
         pass
 

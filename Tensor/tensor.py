@@ -11,7 +11,7 @@ def tensor():
 
             * [Rules of Machine Learning by Google](https://developers.google.com/machine-learning/guides/rules-of-ml)  
     
-    """
+        """
     )
     st.write("")
 
@@ -82,46 +82,136 @@ def tensor():
 
             """
         )
-    with st.expander("Basic Tensors"):
+    with st.expander("Tensor Creation"):
         st.write(
             '''
-            Tensors are multidimensional arrays with a uniform type. There are several
-            functions which allows us to create tensors. As integers in python tensors
-            are immutable.
+                Tensors are multidimensional arrays with a uniform type. There are several
+                functions which allows us to create tensors. As integers in python tensors
+                are immutable.
 
-            BASIC TENSOR OBJECT:
+                BASIC TENSOR OBJECT:
 
-            We can initialise tensor object with constant() or Variable().
+                We can initialise tensor object with constant() or Variable().
 
-            ```
-            scalar = tf.constant(6)
-            vector = tf.constant([2.0,3.0,4.5])
-            ```
+                ```
+                scalar = tf.constant(6)
+                vector = tf.constant([2.0,3.0,4.5])
+                ```
 
-            tf.Variable is class that represents mutable tensor. In opposition to a
-            constant tensors, we can change values in mutable tensors with the assign method.
+                tf.Variable is class that represents mutable tensor. In opposition to a
+                constant tensors, we can change values in mutable tensors with the assign method.
 
-            ```
-            example = tf.Variable(1.) => example.assign(2.)
-            ```
+                ```
+                example = tf.Variable(1.) => example.assign(2.)
+                ```
 
-            GENERATING RANDOM TENSOR
+                GENERATING RANDOM TENSOR
 
-            ```
-            random_tensor = tf.random.Generator.from_seed(37)
-            ```
+                ```
+                random_tensor = tf.random.Generator.from_seed(37)
+                ```
 
-            SHUFFLE TENSOR
+                SHUFFLE TENSOR
 
-            ```
-            tf.random.shuffle()
-            ```
+                ```
+                tf.random.shuffle()
+                ```
 
-            GENERATING TENSOR FROM NUMPAY ARRAY
+                GENERATING TENSOR FROM NUMPAY ARRAY
 
-            ```
-            ones = tf.ones([3,2])
-            ```
+                ```
+                ones = tf.ones([3,2])
+                ```
         
             '''
         )   
+    with st.expander("Inspection"):
+        st.write(
+            '''
+                Most important attributes of tensors are:
+
+                SHAPE:
+
+                Number of elements of each dimension of a tensor.
+                ```
+                tensor.shape
+                ```
+
+                RANK:
+
+                Number of tensor dimensions
+                ```
+                tensor.ndim
+                ```
+
+                AXIS
+
+                A particular dimension
+                ```
+                tensor[0], tensor[:,1]    
+                ```            
+
+                SIZE
+
+                ```
+                A total number of items in tensor.
+                tf.size(tensor)
+                ```
+           
+            '''
+        )
+
+    with st.expander("Indexing"):
+        st.write(
+            '''
+                We can slice tensors in the same manner as python lists.
+
+                ```
+                list = [1,2,3,4,5]
+
+                all_ elements = list[:]
+                first_element = list[0]
+                last_element = list[-1]
+                first_three = list[:2]
+
+                tensor[:dimension,:element]
+
+                ```
+                Adding new dimension to existing tensor
+
+                ```
+                3dim_tensor = 2dim_tensor[...,tf.newaxis]
+                tf.expand_dims(2dim_tensor, axis=-1) 
+                ```
+            '''
+        )
+
+    with st.expander("Arithmetic operations"):
+        st.write(
+            '''
+                As with n-dimensional numpy arrays we can perform vectorised arithmetic
+                operations on matrices or matrices.
+
+                We can easily add, subtract, multiply divide elements by certain number.
+                We can as well multiply tensor with other tensors as long as they have 
+                compatible shapes and size.
+
+                DOT PRODUCT:
+
+                ```
+                tf.matmul
+                tf.tensordot
+                ```
+
+                If we need to adjust shape of different tensors, we can use the following methods:
+
+                ```
+                tf.transpose => this method flipps tensor's axis
+                tf.reshape => this method reshuffles elements in the tensor
+                ```
+
+
+                [Beautiful Visual Guide](http://matrixmultiplication.xyz/)
+
+            '''
+        )
