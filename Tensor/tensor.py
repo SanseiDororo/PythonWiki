@@ -26,8 +26,10 @@ def tensor():
                 * Challenges whith extensive list of rules
                 * Constantly changing environments
                 * Gathering insights from extensive collections of data
-                *
+            """)
+        st.write("***")
 
+        st.write("""
                 Machine learning can be used on anything as long as you can convert it
                 into numbers and program it to find patterns.
 
@@ -212,6 +214,71 @@ def tensor():
 
 
                 [Beautiful Visual Guide](http://matrixmultiplication.xyz/)
+
+            '''
+        )
+
+    with st.expander("Changing Data Type"):
+        st.write(
+            '''
+               In order to make execution of the operations faster, we can
+               change datatype of the tesnors. For example reduce the float
+               size from 32bit to 16 bit
+
+               ```
+               #Change from float_32 to flaot_16: reduced precision
+               tensor_float_16 = tf.cast(tensor_float_32, dtype=tf.float16)
+
+               ```
+
+            '''
+        )
+
+    with st.expander("Aggregation"):
+        st.write(
+            '''
+               Common aggregations operations
+
+               ```
+               #Finding minimum
+               tf.reduce_min
+               ```
+
+               ```
+               #Finding maximum
+               tf.reduce_max
+               ```
+
+               ```
+               #Finding positional maximum
+               tf.argmax(tensor)
+               tesnor[tf.argmax(tensor)]
+               ```          
+
+               ```
+               #Finding mean
+               tf.reduce_mean
+               ```      
+
+               ```
+               #Finding sum
+               tf.reduce_sum
+               ```
+               ```
+               #Finding standar deviation
+               tf.math.reduce_std(tensor)
+               ```
+               
+               ```
+               #Finding variance of a tensor
+               tf.math.reduce_variance(tensor)
+               ```
+
+               ```
+               #Squeezeing: i.d. removind dimensions with size one from the shape of the tensor
+               tf.squeeze(tensor)
+
+               ```
 
             '''
         )

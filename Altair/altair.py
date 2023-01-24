@@ -17,5 +17,5 @@ def altair():
         * Statistics
 
         [Basic Charts Example](https://colab.research.google.com/drive/1b6CXYck3cO-D4e6oBojmAcX-VBO76I7d?usp=sharing)
-    
+        [Additional Explanation](https://www.featureranking.com/tutorials/python-tutorials/altair/)
     ''')
